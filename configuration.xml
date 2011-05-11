@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dernière modification
+le $Date$
+par $Author$
+révision $Revision$ -->
+
+<chapter id="configuration">
+  <title>Configuration d'<productname>Ekylibre</productname></title>
+
+  <indexterm zone="configuration">
+    <primary>configuration</primary>
+  </indexterm>
+
+  <para>
+    Ce chapitre décrit la configuration d'<productname>Ekylibre</productname>.
+  </para>
+</chapter>

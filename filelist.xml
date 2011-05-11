@@ -7,6 +7,18 @@
 <!ENTITY intro      SYSTEM "intro.xml">
 <!ENTITY legal      SYSTEM "legal.xml">
 
+
+<!ENTITY installation  SYSTEM "installation.xml">
+<!ENTITY configuration SYSTEM "configuration.xml">
+
+
+<!ENTITY company       SYSTEM "company.xml">
+<!ENTITY relations     SYSTEM "relations.xml">
+<!ENTITY accountancy   SYSTEM "accountancy.xml">
+<!ENTITY finances      SYSTEM "finances.xml">
+<!ENTITY management    SYSTEM "management.xml">
+<!ENTITY production    SYSTEM "production.xml">
+
 <!--
  Some parts of the documentation are also source for some plain-text
  files used during installation.  To selectively ignore or include

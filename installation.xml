@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dernière modification
+le $Date$
+par $Author$
+révision $Revision$ -->
+
+<chapter id="installation">
+  <title>Procédure d'installation d'<productname>Ekylibre</productname> du code source</title>
+
+  <indexterm zone="installation">
+    <primary>installation</primary>
+  </indexterm>
+
+  <para>
+    Ce chapitre décrit l'installation d'<productname>Ekylibre</productname> en utilisant le code source. (Ce <phrase>chapitre</phrase> peut être ignoré lors de l'installation d'une distribution pré-empaquetée, paquet RPM ou Debian, par exemple. Il est alors plus utile de lire les instruction du mainteneur du paquet.)
+  </para>
+</chapter>

@@ -1,79 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Dernière modification
-     le       $Date$
-     par      $Author$
-     révision $Revision$ -->
+le       $Date$
+par      $Author$
+révision $Revision$ -->
 
 <preface id="preface">
   <title>Préface</title>
 
 
- <para>
-  Cet ouvrage représente la documentation officielle d'<productname>Ekylibre</productname>. 
-  Celle-ci a été rédigée par les développeurs d'<productname>Ekylibre</productname> et quelques volontaires
-  en parallèle du développement du logiciel.
-  Elle décrit toutes les fonctionnalités officiellement supportées par la version 
-  courante d'<productname>Ekylibre</productname>.
- </para>
-
- <para>
-  Afin de faciliter l'accès aux informations qu'il contient,
-  cet ouvrage est organisé 
-  en plusieurs parties. Chaque partie est destinée à une classe précise 
-  d'utilisateurs ou à des utilisateurs de niveaux d'expertise différents&nbsp;:
-
-  <itemizedlist>
-   <listitem>
-    <para>
-     la <xref linkend="tutorial" /> est une introduction informelle destinée aux
-     nouveaux utilisateurs&nbsp;;
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     la <xref linkend="admin" />, destinée aux administrateurs
-     <productname>Ekylibre</productname>, décrit l'installation et
-     l'administration du serveur&nbsp;;
-    </para>
-   </listitem>
-
-   <listitem>
-    <para>
-     la <xref linkend="client-interfaces" /> contient la documentation pour les utilisateurs. 
-     Cette partie contient une information structurée sur les différents modules;
-    </para>
-   </listitem>
-
-  </itemizedlist>
- </para>
-
- <sect1 id="intro-whatis">
-  <title>Définition d'<productname>Ekylibre</productname></title>
-
   <para>
-   <productname>Ekylibre</productname> est un système de gestion de Très 
-   Petites Entreprises (<acronym>TPE</acronym>). Ce dernier a été développé 
-   au SACEA à Bordeaux (France).
+    Cet ouvrage représente la documentation officielle d'<productname>Ekylibre</productname>. Celle-ci a été rédigée par les développeurs d'<productname>Ekylibre</productname> et quelques volontaires en parallèle du développement du logiciel. Elle décrit toutes les fonctionnalités officiellement supportées par la version courante d'<productname>Ekylibre</productname>.
   </para>
 
   <para>
-    <productname>Ekylibre</productname> est une application OpenSource utilisant le framework
-    <productname>Ruby On Rails</productname>.
+    Afin de faciliter l'accès aux informations qu'il contient, cet ouvrage est organisé en plusieurs parties. Chaque partie est destinée à une classe précise d'utilisateurs ou à des utilisateurs de niveaux d'expertise différents&nbsp;:
+    <itemizedlist>
+      <listitem>
+	<para>
+	  la <xref linkend="tutorial" /> est une introduction informelle destinée aux nouveaux utilisateurs&nbsp;;
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  la <xref linkend="admin" />, destinée aux administrateurs <productname>Ekylibre</productname>, décrit l'installation et l'administration de l'application&nbsp;;
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  la <xref linkend="user" /> contient la documentation pour les utilisateurs. Cette partie contient une information structurée sur les différents modules&nbsp;;
+	</para>
+      </listitem>
+
+    </itemizedlist>
   </para>
 
-  <para>
-    Grâce à sa licence libérale, <productname>Ekylibre</productname> peut
-    être utilisé, modifié et distribué librement.
-  </para>
- </sect1>
+  <sect1 id="intro-whatis">
+    <title>Définition d'<productname>Ekylibre</productname></title>
 
-<!--
- &history;
- &notation;
- &info;
- &problems;
--->
+    <para>
+      <productname>Ekylibre</productname> est un système de gestion de Très Petites Entreprises (<acronym>TPE</acronym>). Ce dernier a été développé au SACEA à Bordeaux (France) à partir de la fin 2007.
+    </para>
 
+    <para>
+      <productname>Ekylibre</productname> est une application OpenSource utilisant le framework <productname>Ruby On Rails</productname> (<ulink url="http://www.rubyonrails.org">Site officiel</ulink>).
+    </para>
+
+    <para>
+      Grâce à sa licence GNU/GPL3, <productname>Ekylibre</productname> peut être utilisé, modifié et distribué librement.
+    </para>
+  </sect1>
+
+  <!--
+      &history;
+      &notation;
+      &info;
+      &problems;
+  -->
   
 </preface>
