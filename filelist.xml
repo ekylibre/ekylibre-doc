@@ -7,6 +7,7 @@
 <!ENTITY intro      SYSTEM "intro.xml">
 <!ENTITY legal      SYSTEM "legal.xml">
 
+<!ENTITY start      SYSTEM "start.xml">
 
 <!ENTITY installation  SYSTEM "installation.xml">
 <!ENTITY configuration SYSTEM "configuration.xml">

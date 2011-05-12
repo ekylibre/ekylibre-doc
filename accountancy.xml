@@ -4,6 +4,141 @@ le $Date$
 par $Author$
 révision $Revision$ -->
 
-<chapter id="accoutancy">
+<chapter id="accountancy">
   <title>Comptabilité générale</title>
+  <sect1>
+    <title>Présentation</title>
+    <para>
+      La page du module comptabilité est divisée en trois parties distinctes. Les opérations de paramétrages telles que la création de journaux, de compte. Les opérations principales comme la saisie des écritures et leur pointage. Les impressions de documents comptables, indispensables à la traçabilité des opérations comptables et au suivi financier de l'entreprise. 
+    </para>
+
+  </sect1>
+
+
+  <sect1>
+    <title>Travaux comptables</title>
+
+    <sect2>
+      <title>Consulter et saisir ses écritures</title>
+      <para>
+	Avant tout, vous devez choisir un journal comptable et un exercice comptable comme supports d'enregistrement.
+      </para>
+
+      {{:ekylibre:manual:saisie_ecriture.png|Comptabilité - Saisie des écritures comptables 1}}
+
+      Remplissez le formulaire afin d'enregister votre écriture.
+      {{:ekylibre:manual:saisie_ecriture2.png|Comptabilité - Saisie des écritures comptables 2}}
+
+      Un système de recherche dynamique vous permet de sélectionner précisement votre compte comptable.
+      {{:ekylibre:manual:saisie_ecriture3.png|Comptabilité - Saisie des écritures comptables 3}}
+
+      Une fois l'écriture enregistrée, celle-ci apparaît dans un tableau avec une couleur rouge si elle fait partie d'un ensemble d'enregistrement non équilibrée pour la pièce ou vert dans le cas contraire.
+
+      {{:ekylibre:manual:saisie_ecriture4.png|Comptabilité - Saisie des écritures comptables 4}}
+
+      Par la suite, cette écriture pourra être modifiée avec un nouveau montant au débit ou au crédit par exemple, cela dans le cas où le journal correspondant n'est pas clôturé à cette date. Le verrouillage d'une écriture suite à une clôture rend impossible toute modification ou suppression de celle-ci. 
+
+      {{:ekylibre:manual:saisie_ecriture5.png|}}
+
+      <note>Le listing des écritures qui apparaît peut servir aussi uniquement dans un but consultatif. </note>
+    </sect2>
+
+    <sect2>
+      <title>Pointer un relevé de compte</title>   
+      Avant tout, il faut créer un relevé de compte bancaire. Lors de la création, vous devez renseigner le compte bancaire utilisé et la période à considérer. Des mini-calendriers vous permettent à ce titre de
+      sélectionner la date.
+
+      {{:ekylibre:manual:pointer_releve_compte1.png|Comptabilité - Pointage relevé de compte 1}}
+
+      Par la suite, un tableau répertoriant les écritures relatives au compte considéré par le compte bancaire s'affiche.
+
+      {{:ekylibre:manual:pointer_releve_de_compte2.png|Comptabilité - Pointage relevé de compte 2}}
+      
+      En dépointant les écritures du relevé ou en en pointant de nouvelles, les valeurs des débits et crédits totaux changent. Un petit tour sur la page de visualisation du relevé en cliquant sur le lien "Détail du relevé de compte" confirmera les modifications. 
+      
+      {{:ekylibre:manual:pointer_releve_de_compte3.png|Comptabilité - Pointage relevé de compte 3}}
+    </sect2>
+
+    <sect2>
+      <title>Lettrer des comptes de tiers</title>
+      Le lettrage repère les écritures non équilibrées d'un compte client, fournisseur et précise ainsi les éventuels impayés ayant pû survenir.
+
+      Vous devez au préalable sélectionner le compte client ou fournisseur dont vous souhaitez lettrer les écritures.
+
+      {{:ekylibre:manual:lettrer_ecriture1.png|Comptabilité - lettrage des écritures 1}}
+
+      Vous pouvez lettrer ou délettrer des écritures. Les écritures lettrées et équilibrées apparaitront en vert, le rouge étant réservé pour les écritures non lettrées et le brun pour les écritures lettrées mais non équilibrées. 
+
+      {{:ekylibre:manual:lettrer_ecriture2.png|}}
+    </sect2>
+
+    <sect2>
+      <title>Clôture de journal, d'exercice</title>
+      <para>
+	Vous pouvez clôturer des journaux et des exercices. Pour que l'opération soit effective, il faut que l'ensemble des écritures du journal ou de l'exercice soit équilibrées.
+      </para>
+      <para>
+	Pour clôturer un exercice, un report des à-nouveau est proposé et, dans ce cas, un nouvel exercice crée avec un journal des à-nouveau.
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Bascule comptable</title>
+      La comptabilisation des opérations commerciales (ventes, achats et transferts suivies des factures et règlements) se fait en deux phases:
+      * création des écritures dans le brouillon 
+      * enregistrement effectif de ces écritures dans les journaux
+
+      Après avoir sélectionné la date limite de génération dans un formulaire, les écritures enregistrées dans le brouillon s'affichent dans un tableau.
+
+      {{:ekylibre:manual:bascule_comptable1.png|Comptabilité - Bascule comptable 1}}
+
+      Une validation comptabilise ses écritures dans les journaux qui vont bien.
+    </sect2>
+  </sect1>
+
+
+  <sect1>
+    <title>Documents comptables</title>
+
+    <sect2>
+      <title>Impression des documents</title>
+      Vous avez la possibilité d'imprimer les principaux documents comptables (journaux auxiliaires, journal général, grand livre, balance, documents annuels) sous forme de fichier RPDF.
+
+      {{:ekylibre:manual:impression_journal_auxiliaire.png|Comptabilité - impression journal achat }}
+    </sect2>
+
+  </sect1>
+
+
+
+  <sect1>
+    <title>Paramètres</title>
+    <sect2>
+      <title>Comptes comptables</title>
+      <para>
+	Vous pouvez créer, modifier ou même supprimer un compte dans le cas où celui-ci n'interfère pas avec une opération comptable. Dans le cas où ce compte contient des sous-comptes entrant dans des opérations commerciales, il ne pourra pas être supprimé. 
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Journaux</title>
+      <para>
+	Vous pouvez créer un journal avec une nature définie: vente, achat, banque, à nouveau.  
+	Par la suite, celui-ci pourra être consulté ou même clôturé (à condition qu'il soit équilibré). Rappelons que la clôture d'un journal verrouille toutes les opérations comptables ultérieures en rapport avec lui.   
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Exercices comptables</title>
+      <para>
+	Un exercice comptable nécéssite une date de début et de fin, une date limite des écritures et un code afin d'authentifier l'exercice. La date limite signifie que les écritures saisies au-delà ne sont pas pris en compte dans les documents de l'exercice en cours. 
+      </para>
+      <para>
+	Par la suite, il est possible de consulter le contenu d'un exercice comptable ou même de le clôturer à condition que celui-ci soit équilibré. Rappelons que la clôture d'un exercice comptable verrouille toutes les opérations comptables antérieures à la date de clôture.   
+      </para>
+    </sect2>
+
+  </sect1>
+
+
 </chapter>

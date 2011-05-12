@@ -13,18 +13,19 @@ XSLROOTDIR=/opt/docbook-xsl
 XSL_STYLESHEETS_DIR=/usr/share/xml/docbook/stylesheet/docbook-xsl
 VPATH = $(BASEDIR):$(BASEDIR)/ref
 src = *.xml 
+SOURCE=ekylibre.xml
 
 OUTPUT_DIR := $(shell pwd)/doc
 CHUNK_DIR := $(OUTPUT_DIR)/chunk
 BOOK_DIR := $(OUTPUT_DIR)/book
 
 
-all: clean chunk book
+all: clean chunk book pdf
+
+html: clean chunk book
 
 clean:
 	rm -fr $(OUTPUT_DIR)
-
-
 
 
 
@@ -38,14 +39,9 @@ chunk:
 		--stringparam section.autolabel.max.depth 5 \
 		--stringparam section.label.includes.component.label 1 \
 		--stringparam base.dir $(CHUNK_DIR)/ \
-		 $(XSL_STYLESHEETS_DIR)/xhtml/chunk.xsl ekylibre.xml 
-	ln -s ../../stylesheets $(CHUNK_DIR)/stylesheets
-	ln -s ../../images $(CHUNK_DIR)/images
-#	ln -s stylesheets/*.css -t $(CHUNK_DIR)/
-
-#		--stringparam profile.condition html \
-#		--stringparam profile.attribute "standalone" \
-#		--stringparam profile.value  "no" \
+		 $(XSL_STYLESHEETS_DIR)/xhtml/chunk.xsl $(SOURCE) 
+	ln -sf ../../stylesheets $(CHUNK_DIR)
+	ln -sf ../../images $(CHUNK_DIR)
 
 book:
 	mkdir -p $(BOOK_DIR)
@@ -53,8 +49,21 @@ book:
 		--stringparam section.autolabel 1 \
 		--stringparam section.autolabel.max.depth 5 \
 		--stringparam section.label.includes.component.label 1 \
-		--stringparam html.stylesheet "global.css" \
+		--stringparam html.stylesheet "stylesheets/global.css" \
 		--stringparam base.dir $(BOOK_DIR)/ \
-		$(XSL_STYLESHEETS_DIR)/xhtml/docbook.xsl ekylibre.xml 
-	ln -s ../../stylesheets $(BOOK_DIR)/stylesheets
-	ln -s stylesheets/*.css -t $(BOOK_DIR)/
+		$(XSL_STYLESHEETS_DIR)/xhtml/docbook.xsl $(SOURCE) 
+	ln -sf ../../stylesheets $(BOOK_DIR)/stylesheets
+	ln -sf ../../images $(BOOK_DIR)/images
+
+pdf:
+	mkdir -p $(BOOK_DIR)
+	xsltproc --xinclude --nonet -o $(BOOK_DIR)/book.fo \
+		--stringparam section.autolabel 1 \
+		--stringparam section.autolabel.max.depth 5 \
+		--stringparam section.label.includes.component.label 1 \
+		--stringparam default.image.width 400\
+		--stringparam base.dir $(BOOK_DIR)/ \
+		$(XSL_STYLESHEETS_DIR)/fo/docbook.xsl $(SOURCE) 
+	ln -sf ../../stylesheets $(BOOK_DIR)/stylesheets
+	ln -sf ../../images $(BOOK_DIR)/images
+	fop $(BOOK_DIR)/book.fo $(BOOK_DIR)/book.pdf

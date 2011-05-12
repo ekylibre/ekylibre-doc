@@ -16,53 +16,104 @@ révision $Revision$ -->
     <title>Mon compte</title>
     <para>Vous pouvez modifier votre mot de passe&nbsp;:</para>
 
-      <mediaobject>
-	<imageobject>
-	  <imagedata fileref="images/change_password.png" format="PNG"/>
-	</imageobject>
-	<caption>
-	  <para>Changer de mot de passe</para>
-	</caption>
-      </mediaobject>
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/change_password.png" format="PNG"/>
+      </imageobject>
+      <caption>
+	<para>Changer de mot de passe</para>
+      </caption>
+    </mediaobject>
 
-      <para>
+    <para>
       Vous pouvez également obtenir des informations statistiques quant à l'historique actuel de vos opérations dans la société pour une période donnée:
-
-      {{:ekylibre:manual:consultation_statistique1.png|Relation - statistiques de la société}}
-
     </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/user_statistics.png" format="PNG"/>
+      </imageobject>
+      <caption>
+	<para>Statistiques personnelles</para>
+      </caption>
+    </mediaobject>
+
 
 
   </sect1>
-  <sect1>
+
+
+  <sect1 id="company-tasks">
     <title>Outils</title>
     <para>
       Vous pouvez enregistrer l'ensemble des opérations effectuées dans votre entreprise dans un fichier d'archive ou bien effectuer une mise à jour antérieure des données de votre entreprise, en chargeant un ancien fichier de sauvegarde. Ce qui s'avèrera utile lorsque des saisies erronées auront été faites.
     </para>
   </sect1>
-  <sect1>
+
+
+  <sect1 id="company-parameters">
     <title>Paramètres</title>
     <para>
-      Il s'agit de la rubrique la plus importante du module:
-      * vous renseignez l'étendue géographique de la société comme les établissements qu'elle possède et les services qu'elle propose. 
-      * vous créez des catégories de droits qui sont automatiquement attribuées aux utilisateurs de votre société après leur enregistrement.
-      * vous configurez des paramètres d'utilisation de l'application qui seront propres à votre entreprise (sélection d'un journal de banque par défaut, automatisation de la bascule comptable, renseignement du nombre de jours nécéssaires pour valider une remise de chèque).  
-      * vous configurez les séquences afin d'attribuer des formats de numérotation aux pièces justificatives.
-      * vous configurez les modèles de documents, lesquels représentent les structurations de données relatives au document comptable.    
+      Il s'agit de la rubrique la plus importante du module&nbsp;:
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    vous renseignez l'étendue géographique de la société comme les établissements qu'elle possède et les services qu'elle propose. 
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    vous créez des catégories de droits qui sont automatiquement attribuées aux utilisateurs de votre société après leur enregistrement.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    vous configurez des paramètres d'utilisation de l'application qui seront propres à votre entreprise (sélection d'un journal de banque par défaut, automatisation de la bascule comptable, renseignement du nombre de jours nécéssaires pour valider une remise de chèque).  
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    vous configurez les séquences afin d'attribuer des formats de numérotation aux pièces justificatives.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    vous configurez les modèles de documents, lesquels représentent les structurations de données relatives au document comptable.    
+	  </para>
+	</listitem>
+
+      </itemizedlist>
     </para>
   </sect1>
-  <sect1>
+
+
+
+  <sect1 id="company-infos">
     <title>Informations</title>
     <para>
       Vous pouvez obtenir des informations concernant l'application comme sa version, le système de base de données utilisés ou encore les versions des principaux gems ayant servi à son élaboration.
-
-      {{:ekylibre:manual:consultation_information1.png|Relation - informations sur l'application}}
-
-      En outre, en cas de besoin d'aide sur un point précis de l'application, vous pouvez rechercher l'article répondant au mieux à votre demande. 
-
-      
-      {{:ekylibre:manual:recherche_aide.png|Relation - recherche d'articles pour la rubrique commerciale }}
     </para>
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/about_ekylibre.png" format="PNG"/>
+      </imageobject>
+      <caption>
+	<para>Informations sur Ekylibre</para>
+      </caption>
+    </mediaobject>
+
+    <para>
+      En outre, en cas de besoin d'aide sur un point précis de l'application, vous pouvez rechercher l'article d'aide répondant au mieux à votre demande. 
+    </para>
+
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/help_search.png" format="PNG"/>
+      </imageobject>
+      <caption>
+	<para>Recherche d'aide</para>
+      </caption>
+    </mediaobject>
 
   </sect1>
 

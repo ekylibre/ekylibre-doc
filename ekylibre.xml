@@ -42,7 +42,7 @@ révision $Revision$ -->
 
     <partintro>
       <para>
-	Bienvenue dans le tutoriel d'<productname>Ekylibre</productname>.  Les chapitres suivants présentent une courte introduction à <productname>Ekylibre</productname>, aux concepts d'<acronym>ERP</acronym> ou <acronym>PGI</acronym> en français pour Progiciel de Gestion Intégré.
+	Bienvenue dans le tutoriel d'<productname>Ekylibre</productname>.  Les chapitres suivants présentent une courte introduction à <productname>Ekylibre</productname>, aux concepts d'<acronym>ERP</acronym><footnote><para>Enterprise Resource Planning</para></footnote> ou <acronym>PGI</acronym> en français pour Progiciel de Gestion Intégré.
 	Seules sont nécessaires des connaissances générales sur l'utilisation des ordinateurs. Aucune expérience particulière d'Unix ou de programmation n'est requise. Ce tutoriel a surtout pour but de faire acquérir une expérience pratique des aspects importants du système <productname>Ekylibre</productname>.
 	Il n'est ni exhaustif ni complet, mais introductif.
       </para>
@@ -52,8 +52,10 @@ révision $Revision$ -->
 	La configuration et la gestion sont détaillées dans la <xref linkend="admin"/>.
       </para>
     </partintro>
+    
+    &start;
+
     <!--
-	&start;
 	&query;
 	&advanced;
     -->

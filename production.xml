@@ -6,4 +6,51 @@ révision $Revision$ -->
 
 <chapter id="production">
   <title>Gestion de la production</title>
+
+  <sect1>
+    <title>Présentation</title>
+    <para>
+      La page du module production se divise en deux parties. Les opérations de paramétrage comme l'enregistrement de parcelles ou ilôts et les opérations de production comme l'ajout de nouveaux traitements.
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Productions</title>
+    <sect2>
+      <title>Productions</title>
+      Il est possible de créer des produits à partir de matières premières ou bien de composants issus d'un ou plusieurs stocks. Ces produits composés peuvent être modifiés ou supprimés. 
+    </sect2>
+
+    <sect2>
+      <title>Traitements</title>
+      Vous pouvez enregistrer un traitement effectué sur un îlot en renseignant le type de traitement utilisé par tel employé avec un matériel donné.
+    </sect2>
+  </sect1>
+
+
+  <sect1>
+    <title>Paramètres</title>
+    <sect2>
+      <title>Îlots</title>
+      <para>
+	Vous pouvez enregistrer vos ilôts avec leurs coordonnées géographiques. En précisant si l'îlot est maître, cela signifiera qu'il contient des sous-ilôts.
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Matériel</title>
+      <para>
+	Pour effectuer des traitements (voir partie "Traitements"), vous devez disposer de matériaux de nature spécifique tel qu'un tracteur par exemple. 
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Types de traitement</title>
+      <para>
+	Les traitements effectués sur un îlot sont regroupés par types. Il est possible ensuite de modifier ou supprimer ces types à condition qu'ils ne soient référencés par aucun traitement.
+      </para>
+    </sect2>
+  </sect1>
+
+
 </chapter>

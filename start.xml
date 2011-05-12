@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Dernière modification
+le       $Date$
+par      $Author$
+révision $Revision$ -->
+
+<chapter id="start">
+  <title>Qu'est-ce qu'Ekylibre ?</title>
+
+  <sect1>
+    <title>Concept</title>
+    <para>
+      Ekylibre est une application de gestion intégré pour les TPE agricoles et les TPE de manière plus générale. C'est une application web<footnote><para>En informatique, une application Web (aussi appelée site Web dynamique ou WebApp) est un logiciel applicatif manipulable grâce à un navigateur Web. De la même manière que les sites Web, une application Web est généralement placée sur un serveur et se manipule en actionnant des widgets à l'aide d'un navigateur Web, via un réseau informatique (Internet, intranet, réseau local, etc.).</para></footnote>. Elle peut donc être utilisée aussi bien sur un réseau local que sur Internet.
+    </para>
+
+    <para>
+      Ekylibre est multi-utilisateur, multi-poste et multi-société.
+    </para>
+    
+    <para>
+      L'application peut se décomposer en plusieurs modules&nbsp;:
+      <itemizedlist>
+	<listitem><para>Gestion de la société</para></listitem>
+	<listitem><para>Gestion des relations Client/Fournisseurs</para></listitem>
+	<listitem><para>Comptabilité Générale</para></listitem>
+	<listitem><para>Gestion financière</para></listitem>
+	<listitem><para>Gestion commerciale (ventes, achats et stocks)</para></listitem>
+	<listitem><para>Gestion de la production</para></listitem>
+      </itemizedlist>
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Premiers pas sous Ekylibre</title>
+    <para>
+      L'interface d'Ekylibre se décompose en 4 parties (menu général, menu de gauche, centre et aide contextuelle) qui seront détaillées par la suite.
+    </para>
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/welcome.png" format="PNG"/>
+      </imageobject>
+      <caption>
+	<para>Écran d'accueil sous Ekylibre</para>
+      </caption>
+    </mediaobject>
+    <sect2>
+      <title>Menu général (en haut)</title>
+      <para>
+	La partie gauche du menu liste les modules accessibles. La partie droite, quant à elle, liste des informations sur l'utilisateur et la société en cours ainsi qu'un lien pour se déconnecter.
+      </para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/main_menu.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Menu principal</para>
+	</caption>
+      </mediaobject>
+      
+    </sect2>
+
+    <sect2>
+      <title>Menu latéral gauche</title>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/side_menu.png" width="2in" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Menu latéral</para>
+	</caption>
+      </mediaobject>
+      <para>
+	Ce menu permet l'accès aux opérations spécifiques de chaque module. Ce menu est décomposé en sous-ensembles thématiques. Ainsi tous les modules possède un sous-menu <guisubmenu>Paramètres</guisubmenu> permettant de configurer le module.
+      </para>
+
+      <para>
+	Ce menu possède toujours un lien permettant de revenir au //Tableau de bord// du module où sont affichées des informations statistiques ainsi que des messages destinés à interpeller l'utilisateur en fonction de certains évènements (Ex.\ : Manque de certains produits en stock, Règlements à encaisser...).
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Centre</title>
+      <para>
+	C'est la zone de travail. Un titre est affiché sur chaque page pour pouvoir se repérer en permanence dans le logiciel. 
+      </para>
+
+      <note>Il est à noter que le lien permettant d'ouvrir l'aide contextuelle se trouve à droite du titre.</note>
+    </sect2>
+
+    <sect2>
+      <title>Aide contextuelle</title>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/help_panel.png" width="2in" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Panneau d'aide</para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Pour chaque opération, il existe une aide. Et cette aide permet d'avoir la bonne information au bon moment.
+	Selon l'opération à réaliser, une définition thématique est donnée  et la démarche à suivre expliquée. 
+      </para>
+    </sect2>
+  </sect1>
+
+  <sect1>
+    <title>Conventions</title>
+
+    <para>
+      Ekylibre utilise constamment les mêmes mécanismes pour gérer les informations au travers de l'application. Pour cette raison, il est important de connaître les plus répandus d'entre eux.
+    </para>
+
+    <sect2>
+      <title>Icônes d'action</title>
+
+      <para>Les icônes les plus fréquents sont ceux permettant les opérations suivantes&nbsp;:</para>
+      <itemizedlist>
+	<listitem><para><imagedata format="PNG" width="1em" fileref="images/create.png"/> pour la création</para></listitem>
+	<listitem><para><imagedata format="PNG" width="1em" fileref="images/update.png"/> pour la modification</para></listitem>
+	<listitem><para><imagedata format="PNG" width="1em" fileref="images/delete.png"/> pour la suppressin</para></listitem>
+	<listitem><para><imagedata format="PNG" width="1em" fileref="images/print.png"/> pour l'impression</para></listitem>
+      </itemizedlist>
+    </sect2>
+
+    <sect2>
+      <title>Champs et formulaires</title>
+      <para>
+      Dans les pages qui permettent de saisir des informations, les champs <emphasis>obligatoires</emphasis> apparaissent en bleu alors que les champs <emphasis>facultatifs</emphasis> restent blanc avec un cadre gris.</para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/mandatory_form.png" width="3in" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Exemple de formulaire avec champ obligatoire</para>
+	</caption>
+      </mediaobject>
+
+      <para>Lors des enregistrements, les champs invalides apparaissent en rouge.</para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/bad_form.png" width="3in" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Exemple de formulaire avec champ obligatoire non renseigné</para>
+	</caption>
+      </mediaobject>
+    </sect2>
+  </sect1>
+</chapter>

@@ -6,4 +6,192 @@ révision $Revision$ -->
 
 <chapter id="relations">
   <title>Gestion des relations Clients/fournisseurs</title>
+
+  <sect1 id="relations-presentation">
+    <title>Présentation</title>
+    <para>
+      Le module de gestion des Relations Client/Fournisseur se divise en deux parties. Les opérations de paramétrage comme la mise en place de type de fiches pour déterminer par exemple si un client est une entité physique ou morale et les opérations principales telles que la création de fiches clients.
+    </para>
+  </sect1>
+
+
+  <sect1 id="relation-thirds">
+    <title>Clients et fournisseurs</title>
+    <sect2>
+      <title>Gérer les fiches</title>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/entities_index.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Liste des fiches clients/fournisseurs</para>
+	</caption>
+      </mediaobject>
+      
+      <para>
+	À partir du listing des fiches, vous avez la possibilité entre effectuer une recherche par filtrage ou bien  saisir une nouvelle fiche.
+      </para>
+      
+      <para>
+	Dans ce second cas, cela se fait en deux étapes. Premièrement, la création ou modification d'entités par l'intermédiaire de formulaires. Il faut y préciser&nbsp;:
+	<itemizedlist>
+	  <listitem>les caractéristiques principales de l'entité&nbsp;: personne ou société ?, sa langue, son nom et prénom, sa position en tant que client, fournisseur ou transposteur ?</listitem>
+	  <listitem>l'attribution d'un compte comptable ainsi que d'autres informations plus ciblées dans le cas où la personne est un client (catégorie client, détails de la première rencontre, représentant, avantages commerciaux).</listitem>
+	  <listitem>les informations complémentaires pour détailler son profil comme sa date de naissance, une photo, le cas échéant son site internet.</listitem>
+	</itemizedlist>
+	
+	Deuxièmement, la gestion de paramètres. On peut gérer des contacts, des évènements, des liens, des observations, des responsabilités et des comptes bancaires pour l'entité (voir la section "Responsabilités").
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Import/Export de fiches</title>
+      <para>
+	Ces commandes permettent de sauver l'ensemble des clients et fournisseurs dans un fichier destiné à être lu dans un tableur ou récupérer ceux-ci dans le cas d'une mise à jour. 
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Évènements</title>
+      <para>
+	Comme des mini-calendriers, les évènements permettent un rendu plus ou moins détaillé dans le temps et l'espace des rencontres ayant eu lieu avec tel employé. Lors de l'ajout d'un évènement, il vous faut renseigner notamment les protagonistes ainsi que le type de l'évènement (téléphone, fax, audience).
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/new_event.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Enregistrement d'un évènement</para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Vous pouvez fournir des renseignements complémentaires tels que la durée, l'endroit et la cause de cet évènement.
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Responsabilités</title>
+      <para>
+	Il est possible d'attribuer des responsabilités à tels clients ou fournisseurs lors d'opérations commerciales par exemple. Pour cela vous devez passer par la fiche entité qui vous intéresse.
+      </para>
+      
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/entity_mandates.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Liste des responsabilités d'une personne</para>
+	</caption>
+      </mediaobject>
+      
+      <para>
+	Les differentes fonctions exercées par l'entité apparaissent dans un tableau avec, pour chacune d'elles, leur localisation dans le temps.
+      </para>
+      
+      <para>
+	Un formulaire permet d'ajouter une responsabilité à cette fiche en renseignant la fonction ainsi que la période d'application de cette fonction.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/new_mandate.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Enregistrement d'une responsabilité/mandat</para>
+	</caption>
+      </mediaobject>
+
+    </sect2>
+  </sect1>
+
+  <sect1 id="relations-parameters">
+    <title>Paramètres</title>
+
+    <sect2>
+      <title>Types de fiches</title>
+      <para>
+	La gestion de type de fiches permet de regrouper plus clairement les entités Client/fournisseur suivant qu'il s'agit de personnes physiques ou non. Ainsi l'attribution d'un type à une entité lors de sa création ou modification peut faciliter son identification lors d'une recherche ultérieure.  
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Catégories de fiches</title>
+      <para>
+	La gestion des catégories de fiches rassemble les entités clientes et fournisseurs en catégories distinctes et permet ainsi de les fidéliser en appliquant par exemple un système de grille tarifaire. Suivant sa catégorie, un client ou un fournisseur pourra se voir accorder des privilèges spécifiques (tarifs peu élévés).  
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Types de liens</title>
+      <para>
+	En définissant de nouveaux types de lien (ascendant ou descendant) entre entités, on peut obtenir des informations concernant les rapports commerciaux de nos différents clients et fournisseurs.
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Types d'évènements</title> 
+      <para>
+	La gestion des types d'évènements permet de regrouper plus clairement les évènements propres à chaque entité. Ainsi l'attribution d'un type à une entité lors de sa création ou modification peut faciliter son identification lors d'une recherche ultérieure.  
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Champs personnalisés</title>
+      <para>
+	Ekylibre donne la possibilité de gérer de nouveaux champs destinés à apporter des informations complémentaires sur les entités. Dotés de caractéristiques propres comme le nom, le type de données, un état actif ou obligatoire, ces champs seront ainsi rajoutés dans les formulaires de gestion des entités. 
+      </para>
+      <para>
+	Cet outil de personnalisation se veut très efficace notamment dans la création de liste déroulante où on peut ajouter les choix qui seront proposés par celle-ci.
+      </para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/new_custom_field.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Création d'un champ personnalisé</para>
+	</caption>
+      </mediaobject>
+
+    </sect2>
+
+    <sect2>
+      <title>Configurer les responsabilités</title>
+      <para>
+	Vous pouvez effectuer des recherches par filtre sur les responsabilités des clients et fournisseurs (par famille, organisation et titre) et modifier leur valeurs.
+      </para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/configure_mandates.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Gérer les responsabilités par groupe</para>
+	</caption>
+      </mediaobject>
+
+      <para>
+	Pour que les modifications aient bien lieu, vous ne devez pas oublier de cocher la case correspondante sur la ligne.
+      </para>
+    </sect2>
+
+    <sect2>
+      <title>Zones administratives et postales</title> 
+      <para>
+	Vous pouvez créer des villes et les regrouper dans des zones administratives précises (canton, département, arrondissement...). Ceci permettra un meilleur rendu géographique des rapports de la société avec leurs clients et fournisseurs (envoi de devis, factures, livraisons). Ce rendu peut être précisé grâce à un filtrage de recherche avec divisions et sous-divisions.
+      </para>
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/districts.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Liste des zones administratives</para>
+	</caption>
+      </mediaobject>
+    </sect2>
+
+  </sect1>
+
 </chapter>

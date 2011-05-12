@@ -6,4 +6,185 @@ révision $Revision$ -->
 
 <chapter id="management">
   <title>Gestion commerciale</title>
+
+  <sect1>
+    <title>Présentation</title>
+    La page du module commerce se divise en 4 parties distinctes. Les opérations de paramétrage comme la création de produits, de catégories de produits, de délais par exemple. Les opérations relatives aux ventes comme l'enregistrement d'un nouveau devis. Les opérations relatives aux achats comme l'enregistrement d'un nouvel achat. Les opérations relatives à la gestion des stocks comme l'ajout de lieu de stockage.
+  </sect1>
+
+
+  <sect1>
+    <title>Ventes</title>
+    <sect2>
+      <title>Nouveau devis</title>
+
+
+      Après avoir sélectionné le client, vous pouvez créer votre vente en enregistrant les conditions de vente, l'adresse du devis, de la livraison et de la facture, le responsable de la transaction ainsi que le nom du transporteur s'il y en a. Des liens vous permettront de créer des enregistrements pour ces champs s'il n'en existe aucun.
+
+      NB: il est possible de paramétrer les formules de politesse dans les devis ou les commandes en cochant la case Devis au format lettre. 
+
+      {{:ekylibre:manual:creation_devis.png|Création du devis - création de la vente}}
+
+      Cette première étape effectuée, vous obtenez:
+
+      {{:ekylibre:manual:selection_produit.png|Création du devis - sélection des produits}}
+
+      Vous avez la possibilité d'ajouter des produits à votre devis, de le modifier ou carrément de l'imprimer. Si l'un des produits est une offre d'abonnement alors un listing des abonnements pour ce devis s'affichera:
+
+      {{:ekylibre:manual:ajout_produit_devis.png|Création du devis - ajout de produits au devis}}
+
+      A partir de là, soit vous passez le devis en commande, validez la livraison pour passer directement en facturation:
+
+      {{:ekylibre:manual:planification_livraison.png|Planification des livraisons}}
+
+      Soit vous passez directement à la facturation:
+
+      {{:ekylibre:manual:facture_reglement.png|Facture et règlement(s) de la vente ...}}
+
+      En ajoutant de nouveaux règlements ou en utilisant des règlements partiellement utilisés, vous pourrez ainsi solder le montant de votre vente:
+
+      {{:ekylibre:manual:ajout_reglement.png|}}
+    </sect2>
+
+    <sect2>
+      <title>Liste des ventes</title>
+      En sélectionnant  votre vente dans le listing, vous pouvez modifier le devis en ajoutant d'autres produits.
+      Lorsqu'un grand nombre de ventes est enregistré, un système de recherche permet de consulter seulement les ventes en cours ou celles qui sont impayées.  
+    </sect2>
+
+<!--
+    <sect2>
+      <title>Factures</title>
+      A partir du listing, vous pouvez imprimer une facture ou bien l'à passer en avoir. Les avoirs se distinguent avec des valeurs négatives dans les montants.  
+      Lorsqu'un grand nombre de factures est enregistré, un système de recherche permet de consulter les factures classiques et les avoirs (partiels ou totals).
+    </sect2>
+-->
+
+    <sect2>
+      <title>Abonnements</title>
+      Lorsqu'un grand nombre d'abonnements est enregistré, un système de recherche permet de consulter les abonnements par type, par date ou numéro suivant que vous proposez des abonnements par date ou numéro. 
+      (voir partie: Type d'abonnement)
+    </sect2>
+
+    <sect2>
+      <title>Statistiques</title>
+      Vous choisissez entre une représentation graphique et une représentation au format CSV. 
+      Dans le premier cas, vous obtenez une courbe caractéristique de l'évolution du taux de vente d'un produit pour un nombre d'année donné.
+      Dans le deuxième cas, vous exporter des données (quantités, montants HT, montants TTC) extraites de factures ou de commandes dans un fichier tableur.
+    </sect2>
+  </sect1>
+
+
+
+
+  <sect1>
+    <title>Achats</title>
+
+    <sect2>
+      <title>Nouvel achat</title>
+      Premièrement vous renseignez les caractéristiques de votre nouvel achat, à savoir le nom du fournisseur et l'adresse de livraison:
+
+      {{:ekylibre:manual:creation_achat.png|Nouvel achat - Création de l'achat}}
+
+      Ceci effectuée, vous obtenez:
+
+      {{:ekylibre:manual:creation_achat2.png|Nouvel achat - Produits de la commande ...}}
+
+      Vous avez la possibilité de modifier le nom de l'acheteur ou d'ajouter des produits à votre commande:
+
+      {{:ekylibre:manual:creation_achat3.png|Nouvel achat - Ajout d'un produit à la commande}}
+
+      Choisissez le produit à acheter en sélectionnant le prix et la quantité désirée. Le montant HT et la TVA se calculent automatiquement. Les produits sont stockés à l'emplacement choisi (lieu de stockage).
+
+      Une fois tous les produits à acheter enregistrés, vous pouvez passer aux règlements:
+
+      {{:ekylibre:manual:creation_achat4.png|Nouvel achat - Règlements}}
+
+      En ajoutant de nouveaux règlements ou en utilisant des règlements partiellement utilisés, vous pourrez ainsi solder le montant de votre achat: 
+
+      {{:ekylibre:manual:creation_achat5.png|Nouvel achat - Ajouter un règlement}}
+
+    </sect2>
+
+
+    <sect2>
+      <title>Liste des achats</title>
+      Tous les achats sont listés dans un tableau. Vous pouvez modifier un achat en ajoutant un produit à la commande existante. 
+    </sect2>
+  </sect1>
+
+
+  <sect1>
+    <title>Stocks</title>
+    <sect2>
+      <title>Stocks</title>
+      Il est possible de consulter l'état d'un lieu de stockage en le sélectionnant dans un formulaire. L'état d'un produit est matérialisé par un jeu de couleurs: 
+      * vert si le stock est supérieur au stock minimum
+      * orange si le stock est compris entre le stock minimum critique et le stock minimum
+      * rouge si le stock est inférieur au stock minimum critique. 
+      Vous pouvez aussi accéder aux caractéristiques détaillées du produit comme son état dans chaque lieu de stockage ainsi que les composants qui le constitue.
+    </sect2>
+
+    <sect2>
+      <title>Lieux de stockage</title>
+      Vous devez enregistrer des lieux de stockage pour gérer vos stocks. A ce titre, on distingue les lieux de stockage classique des réservoirs. Dans tous les cas, vous précisez la localisation géographique de votre zone de stockage ainsi que le compte comptable destiné à enregistrer l'état de ce stock. La différence réside dans le réservoir où vous devez mentionner le produit à stocker.
+    </sect2>
+
+    <sect2>
+      <title>Transports</title>
+      Les transports permettent de regrouper des livraisons mutuellement. Pour cela, il suffit de sélectionner un chargé de transport, un responsable et la date à laquelle celui-ci est effectué.
+    </sect2>
+
+    <sect2>
+      <title>Transferts et pertes</title>
+      Vous pouvez enregistrer des transferts et des pertes de stocks pour une certaine quantité de produit. Dans le premier cas il vous suffit de préciser les stocks d'entrée et de sortie tandis que dans le deuxième cas, vous n'aurez à préciser que le stock sur lequel la perte est constatée. 
+    </sect2>
+
+    <sect2>
+      <title>Inventaire</title>
+      Vous avez la possibilité d'établir des inventaires pour évaluer la quantité d'un produit dans vos stocks. En choisissant de refléter les changements, un rééquilibrage est fait sur les différences pouvant exister entre les quantités réelles et celles attendues et ainsi la quantité réelle du produit enregistrée dans les stocks concernés.    
+    </sect2>
+  </sect1>
+
+
+  <sect1>
+    <title>Paramètres</title>
+
+    <sect2>
+      <title>Produits</title>
+      Vous pouvez enregistrer des produits destinés à la vente ou résultant d'un achat avec la possibilité de gérer leurs stocks. Lorsqu'un grand nombre de produits est enregistré, un système de recherche permet de le retrouver. 
+    </sect2>
+
+    <sect2>
+      <title>Catégories de produits</title>
+      Elles servent à identifier et à regrouper les produits de façon hiérarchisée (une catégorie pouvant en inclure d'autres).
+    </sect2>
+
+    <sect2>
+      <title>Prix</title>
+      Un prix peut être ajouté à un produit destiné à la vente ou à l'achat. Dans le deuxième cas, il faut renseigner le fournisseur proposant ce prix là. L'intérêt est que vous pouvez préciser des intervalles de quantité pour lesquels le prix ajouté est applicable.  Lorsqu'un grand nombre de prix est enregistré, un système de recherche permet de consulter l'ensemble des prix de tous les produits, des produits à vendre ou bien ceux à acheter à tel fournisseur.
+    </sect2>
+
+    <sect2>
+      <title>Délais</title>
+      Les délais définissent automatiquement des dates d'échéances lors de ventes ou d'achats d'un produit. Ces délais seront utilisés lors de la création de **types de ventes** pour préciser une date limite de paiement et d'expiration. Vous pouvez les renseigner sous forme d'expressions. 
+    </sect2>
+
+    <sect2>
+      <title>Types de livraison</title>
+      Vous devez ajouter des types pour les livraisons en précisant leur **code Incoterms 2000**, lequel est utilisé afin de définir des responsabilités et obligations entre acheteurs et vendeurs dans le cadre d'un contrat commerciaux. 
+    </sect2>
+
+    <sect2>
+      <title>Types de vente</title>
+      Vous pouvez définir des caractéristiques de vente comme le délai de paiement, d'expiration, la prise en compte d'acompte et dans ce cas la valeur de celui-ci.
+    </sect2>
+
+    <sect2>
+      <title>Types d'abonnement</title>
+      Vous définissez des types d'abonnements à des produits par date ou par numéro. Si le type d'abonnement propose des réductions, il vous suffit de renseigner sa valeur dans le champ correspondant.
+    </sect2>
+
+  </sect1>
+
 </chapter>
