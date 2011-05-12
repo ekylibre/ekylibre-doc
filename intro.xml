@@ -44,7 +44,7 @@ révision $Revision$ -->
     </para>
 
     <para>
-      <productname>Ekylibre</productname> est une application OpenSource utilisant le framework <productname>Ruby On Rails</productname> (<ulink url="http://www.rubyonrails.org">Site officiel</ulink>).
+      <productname>Ekylibre</productname> est une application OpenSource utilisant le framework <productname>Ruby On Rails</productname><footnote><para>Ruby on Rails, également appelé RoR ou Rails est un framework web libre écrit en Ruby. Il suit le motif de conception Modèle-Vue-Contrôleur aussi nommé MVC. Il permet de créer des applications web rapidement, car il impose une structure au programmeur, et ainsi l'oblige à avoir une logique et une démarche qui favorise la réalisation de l'application. Il ajoute aussi un grand niveau d'abstraction dans la programmation de l'application, grâce à un ensemble de fonctions de haut niveau permettant de se concentrer surtout sur les fonctionnalités plutôt que sur la mécanique autour de ces fonctionnalités.</para></footnote> (<ulink url="http://www.rubyonrails.org">Site officiel</ulink>).
     </para>
 
     <para>
