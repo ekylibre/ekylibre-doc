@@ -6,4 +6,64 @@ révision $Revision$ -->
 
 <chapter id="company">
   <title>Gestion de la société</title>
+
+  <sect1 id="company-presentation">
+    <title>Présentation</title>
+    <para>Le module de gestion des sociétés se divise en quatre parties. Des opérations de paramétrage comme la création d'un nouvel établissement, des opérations pour gérer votre compte, des outils pour assurer la traçabilité de vos données ou encore une rubrique pour obtenir des informations à propos de votre société.</para>
+
+  </sect1>
+  <sect1 id="company-my_account">
+    <title>Mon compte</title>
+    <para>Vous pouvez modifier votre mot de passe&nbsp;:</para>
+
+      <mediaobject>
+	<imageobject>
+	  <imagedata fileref="images/change_password.png" format="PNG"/>
+	</imageobject>
+	<caption>
+	  <para>Changer de mot de passe</para>
+	</caption>
+      </mediaobject>
+
+      <para>
+      Vous pouvez également obtenir des informations statistiques quant à l'historique actuel de vos opérations dans la société pour une période donnée:
+
+      {{:ekylibre:manual:consultation_statistique1.png|Relation - statistiques de la société}}
+
+    </para>
+
+
+  </sect1>
+  <sect1>
+    <title>Outils</title>
+    <para>
+      Vous pouvez enregistrer l'ensemble des opérations effectuées dans votre entreprise dans un fichier d'archive ou bien effectuer une mise à jour antérieure des données de votre entreprise, en chargeant un ancien fichier de sauvegarde. Ce qui s'avèrera utile lorsque des saisies erronées auront été faites.
+    </para>
+  </sect1>
+  <sect1>
+    <title>Paramètres</title>
+    <para>
+      Il s'agit de la rubrique la plus importante du module:
+      * vous renseignez l'étendue géographique de la société comme les établissements qu'elle possède et les services qu'elle propose. 
+      * vous créez des catégories de droits qui sont automatiquement attribuées aux utilisateurs de votre société après leur enregistrement.
+      * vous configurez des paramètres d'utilisation de l'application qui seront propres à votre entreprise (sélection d'un journal de banque par défaut, automatisation de la bascule comptable, renseignement du nombre de jours nécéssaires pour valider une remise de chèque).  
+      * vous configurez les séquences afin d'attribuer des formats de numérotation aux pièces justificatives.
+      * vous configurez les modèles de documents, lesquels représentent les structurations de données relatives au document comptable.    
+    </para>
+  </sect1>
+  <sect1>
+    <title>Informations</title>
+    <para>
+      Vous pouvez obtenir des informations concernant l'application comme sa version, le système de base de données utilisés ou encore les versions des principaux gems ayant servi à son élaboration.
+
+      {{:ekylibre:manual:consultation_information1.png|Relation - informations sur l'application}}
+
+      En outre, en cas de besoin d'aide sur un point précis de l'application, vous pouvez rechercher l'article répondant au mieux à votre demande. 
+
+      
+      {{:ekylibre:manual:recherche_aide.png|Relation - recherche d'articles pour la rubrique commerciale }}
+    </para>
+
+  </sect1>
+
 </chapter>
