@@ -54,6 +54,7 @@ clean:
 website:
 	mkdir -p $(WEBSITE_DIR)
 	xsltproc $(WEBSITE_PARAMS) $(XSL_STYLESHEETS_DIR)/xhtml/chunk.xsl $(SOURCE) 
+	./layoutize $(WEBSITE_DIR)/*.html
 	ln -sf ../../stylesheets $(WEBSITE_DIR)
 	ln -sf ../../images $(WEBSITE_DIR)
 

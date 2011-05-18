@@ -1,13 +1,15 @@
-* { font-family: Liberation,Arial,sans-serif; }
+/** { font-family: Liberation,Arial,sans-serif; }
 a:link, a:visited, a:focus, a:active { color: #05A; }
 p { text-align: justify; }
 body { background: white; padding: 24px; margin: 0;}
 hr { border: none; height: 1px; background: #DDD; }
 h1, h2 { color: #047 }
 h3 { color: #59C }
+*/
 
 /*.mediaobject{ background:#F7F7F7; width: 90%; margin: 8px auto; border: 1px solid #DDD; padding: 0;  -moz-box-shadow: 0 0 10px #DDD;}*/
 .mediaobject{text-align: center;}
+.mediaobject table { margin: 0 auto; }
 .mediaobject img {  margin: 16px auto 0;  -moz-box-shadow: 0 0 20px #DDD;}
 /*.mediaobject .caption { background: #EEE;  }*/
 .mediaobject .caption p { text-align: center; font-style: italic; margin: 0; padding: 0.5em; color: #555;}
