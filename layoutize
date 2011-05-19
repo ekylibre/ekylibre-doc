@@ -9,10 +9,11 @@ for k, v in replaces
   File.open("layout/#{v}.html", "rb") do |f| 
     replaces[k] = f.read.gsub(/\s*\n\s*/, '').to_s 
     replaces[k].gsub!(/(src|href)\=((\'|\")[^\'\"]+(\'|\"))/) do |m|
-      n = m.split("=")
+      o = m.split("=")
+      n = [o[0], o[1..-1].join("=")]
       n[1].gsub!(/[\'\"]/, '')
-      unless n[1].match(/https:\/\//)
-        n[1] = "https://www.ekylibre.org/spip#{'/' unless n[0].match(/^\//)}"+n[1]
+      unless n[1].match(/http(s)?:\/\//)
+        n[1] = "https://www.ekylibre.org/site#{'/' unless n[0].match(/^\//)}"+n[1]
       end
       n[1] = "\"#{n[1]}\""
       n.join("=")
