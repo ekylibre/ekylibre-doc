@@ -19,7 +19,7 @@ révision $Revision$ -->
 <!ENTITY oelig "œ">
 <!ENTITY pi "pi">
 
-<!ENTITY % version SYSTEM "version.xml">
+<!ENTITY % version SYSTEM "../version.xml">
 %version;
 <!ENTITY % filelist SYSTEM "filelist.xml">
 %filelist;
