@@ -11,25 +11,22 @@ révision $Revision$ -->
     <primary>installation</primary>
   </indexterm>
 
-  <para>
-    Ce chapitre décrit l'installation d'<productname>Ekylibre</productname> en utilisant le code source. (Ce <phrase>chapitre</phrase> peut être ignoré lors de l'installation d'une distribution pré-empaquetée, paquet RPM ou Debian, par exemple. Il est alors plus utile de lire les instruction du mainteneur du paquet.)
-  </para>
+  <para>Ce chapitre décrit l'installation d'&ekylibre; en utilisant le code source. (Ce <phrase>chapitre</phrase> peut être ignoré lors de l'installation d'une distribution pré-empaquetée, paquet RPM ou Debian, par exemple. Il est alors plus utile de lire les instruction du mainteneur du paquet.)</para>
 
-  <para>Ekylibre utilise [[wpfr>Ruby]] et le [[wpfr>Framework|framework]] [[wpfr>Ruby_on_Rails|Ruby on Rails]].
-  Vous pouvez le [[ekylibre:download|télécharger librement]] sur ce site. Ekylibre fonctionne avec les bases de données **MySQL**, **PostgreSQL** et **SQLite3** (il n'a pas été testé avec d'autres bases de données).
+  <para>&ekylibre; utilise <ulink url="http://www.ruby-lang.org">Ruby</ulink> et le framework <ulink url="http://rubyonrails.org/">Ruby on Rails</ulink>. Vous pouvez le télécharger librement sur <ulink>http://www.ekylibre.org</ulink>. &ekylibre; fonctionne avec les bases de données <ulink url="http://mysql.com">MySQL</ulink>, <ulink url="http://www.postgresql.org">PostgreSQL</ulink> et <ulink url="http://sqlite.org">SQLite</ulink> (il n'a pas été testé avec d'autres bases de données).
   </para>
 
   <sect1>
-    <title>Systèmes d'exploitation Debian/Ubuntu</title>
+    <title>Systèmes d'exploitation basés sur Debian</title>
 
-    <para>L'installation d'Ekylibre sous les distribution dérivées de Debian peut se faire automatiquement avec un gestionnaire de paquet si les dépendances sont satisfaites (Ce qui est le cas à partir de Squeeze (6) sous Debian et de Lucid (10.04 LTS) sous Ubuntu)</para>
+    <para>L'installation d'&ekylibre; sous les <ulink url="http://www.debian.org/misc/children-distros.fr.html">distribution dérivées</ulink> de Debian peut se faire automatiquement avec un gestionnaire de paquet si les dépendances sont satisfaites (Ce qui est le cas à partir de Squeeze (6) sous Debian et de Maverick (10.10) sous Ubuntu)</para>
 
     <para>Sinon, il est toujours possible de l'installer manuellement.</para>
 
     <sect2>
       <title>Installation du paquet</title>
 
-      <para>Les paquets Ekylibre sont disponibles sur <ulink>www.ekylibre.org</ulink>. </para>
+      <para>Les paquets &ekylibre; sont disponibles sur <ulink>www.ekylibre.org</ulink>. Après téléchargement du paquet, il faut l'installer avec Gdebi qui installera aussi les dépendances.</para>
 
     </sect2>
 
@@ -37,112 +34,107 @@ révision $Revision$ -->
       <title>Installation manuelle</title>
 
       <sect3>
-	<title>Récupération d'Ekylibre</title>
-	<para>
-	  Vous pouvez récupérer une archive des sources d'Ekylibre sur <ulink>http://www.ekylibre.org</ulink>. Un fois le fichier récupéré, vous pouvez le décompresser et vous positionner dedans.
-	</para>
-<screen>
-  wget https://www.ekylibre.org/releases/latest/source/ekylibre-0.3.0-source.tar.bz2
-  tar xjvf ekylibre-0.3.0-source.tar.bz2
-  cd ekylibre/
-</screen>
-	
+	<title>Récupération d'&ekylibre;</title>
+	<para>Vous pouvez récupérer une archive des sources d'&ekylibre; sur <ulink>http://www.ekylibre.org</ulink>. Une fois le fichier récupéré, vous pouvez le décompresser et vous positionner dedans.</para>
+	<screen>wget https://www.ekylibre.org/releases/latest/source/ekylibre-0.3.0-source.tar.bz2
+tar xjvf ekylibre-0.3.0-source.tar.bz2
+cd ekylibre/</screen>
+ou directement sur <ulink url="https://www.github.com/ekylibre/ekylibre">Github</ulink>&nbsp;:
+<screen>wget https://www.github.com/ekylibre/ekylibre/tarball/master
+tar xzvf ekylibre-0.3.x-gyyyyyyy.tar.gz
+cd ekylibre-ekylibre-yyyyyyy</screen>
       </sect3>
 
+
+
       <sect3>
+	<para>Maintenant, il faut installer et/ou configurer la base de données. &ekylibre; respecte au maximum les standards SQL communs à PostgreSQL, MySQL et SQLite. En théorie, il est compatible avec tous les adaptateurs fournis avec Ruby On Rails (Oracle, Firebird, Microsoft SQLServer...) mais n'a jamais été réellement testé. La première phase de l'installation est donc de s'assurer que vous avez une base de données en route. Si c'est déjà la cas, vous pouvez passer cette étape.</para>
 	<title>Installation de la base de données</title>
-	<para>
-	  Ekylibre respecte au maximum les standards SQL communs à PostgreSQL, MySQL et SQLite. En théorie, il est compatible avec tous les adaptateurs fournis avec Ruby On Rails (Oracle, Firebird, Microsoft SQLServer...) mais n'a jamais été réellement testé. La première phase de l'installation est donc de s'assurer que vous avez une base de données en route. Si c'est déjà la cas, vous pouvez passer cette étape.
+	<itemizedlist>
+	  <listitem>
+	    <para>Pour PostgreSQL, il suffit d'installer le paquet par défaut. &ekylibre; est compatible avec les versions 8.3 et supérieures&nbsp;:</para>
+	    <screen>sudo apt-get install postgresql libpq-dev</screen>
+	  </listitem>
+	  <listitem>
+	    <para>Pour MySQL, le paquet par défaut convient, s'il n'en existe pas il faut installer un paquet <package>mysql-server-5.x</package>. &ekylibre; est compatible avec les versions 5 et supérieures&nbsp;:</para>
+	    <screen>sudo apt-get install mysql-server libmysqlclient-dev</screen>
+	  </listitem>
+	  <listitem>
+	    <para>Pour SQLite3, il suffit juste d'installer la librairie de développement&nbsp;:</para>
+	    <screen>sudo apt-get install libsqlite3-dev</screen>
+	  </listitem>
+	</itemizedlist>
+      </sect3>
+      
+
+      <sect3>
+	<title>Installation de Ruby</title>
+	<para>&ekylibre; fonctionne avec la version 1.8.7 ou 1.9.2 de Ruby. C'est le premier composant à installer&nbsp;:
+	<screen>sudo apt-get install ruby</screen>
 	</para>
-	<para>
-	  Pour PostgreSQL, il suffit d'installer le paquet par défaut. Ekylibre est compatible avec les versions 8.3 et supérieures&nbsp;:
-<screen>
-  sudo apt-get install postgresql
-</screen>
+	<para>Si vous disposez par défaut d'une version antérieure, il va être nécessaire d'installer Ruby manuellement depuis les sources. Les commandes suivantes permettent de télécharger le code source, le décompresser, le compiler et installer ruby 1.9.2&nbsp;:
+	<screen>wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.bz2
+tar xjvf ruby-1.9.2-p290.tar.bz2
+cd ruby-1.9.2-p290
+./configure
+make
+sudo make install</screen>
+	Pour plus de détails, voir <ulink href="http://www.ruby-lang.org/fr/">le site officiel de Ruby</ulink>.</para>
+      </sect3>
+
+
+      <sect3>
+	<title>Installation de Rubygems</title>
+	<para><ulink url="http://www.rubygems.org">Rubygems</ulink> est un gestionnaire de paquets pour les scripts Ruby. Il est indépendant des circuits de validation des paquets du système Debian. Il est utilisable à partir de la version 1.3.7&nbsp;:
+	<screen>sudo apt-get install rubygems</screen>
 	</para>
-	<para>
-	Pour MySQL, le paquet par défaut convient, s'il n'en existe pas il faut installer un paquet <package>mysql-server-5.x</package>. Ekylibre est compatible avec les versions 5 et supérieures&nbsp;:
-<screen>
-  sudo apt-get install mysql-server
-</screen>
-	</para>
-	<para>
-Pour SQLite3, la commande est la suivante. Comme on peut le constater, SQLite n'est pas un serveur mais bien une librairie&nbsp;:
-<screen>
-  sudo apt-get install libsqlite3-ruby
-</screen>
+	<para>Si la version est trop ancienne, vous pouvez l'installer manuellement&nbsp;:
+	<screen>wget http://production.cf.rubygems.org/rubygems/rubygems-1.8.10.tgz
+tar xzvf rubygems-1.8.10.tgz
+cd rubygems-1.8.10
+sudo ruby setup.rb</screen>
+<note>Si la commande <command>gem</command> est indisponible, il est probable que la commande <command>gem1.8</command> ou <command>gem1.9</command> ne le soit pas. Si c'est le cas il est recommandé de faire un lien symbolique pour la commande <command>gem</command> soit disponible.</note>
 	</para>
       </sect3>
 
+
       <sect3>
-	<title>Installation des dépendances</title>
-
-	<sect4>
-	  <title>Installation de Ruby</title>
-	  <para>
-	  Ekylibre fonctionne avec la version 1.8.7 de Ruby. C'est le premier composant à installer&nbsp;:
-<screen>
-  sudo apt-get install ruby
-</screen>
-Si vous ne disposez par défaut d'une version antérieure, il va être nécessaire d'installer Ruby manuellement depuis les sources. Pour plus de détails, voir <ulink href="http://www.ruby-lang.org/fr/">le site officiel de Ruby</ulink>.
-	  </para>
-	</sect4>
-
-	<sect4>
-	  <title>Installation de Rake</title>
-	  Rake est un utilitaire similaire à Make mais en Ruby nécessaire à la maintenance d'Ekylibre&nbsp;:
-<screen>
-  sudo apt-get install rake
-</screen>
-	</sect4>
-
-	<sect4>
-	  <title>Installation de Rubygems</title>
-	  <para>
-	    Rubygems est un gestionnaire de paquets pour les scripts Ruby. Il est indépendant des circuits de validation des paquets du système Debian. Il est utilisable à partir de la version 1.3.7&nbsp;:
-<screen>
-  sudo apt-get install rubygems
-</screen>
-Si la version est trop ancienne, vous pouvez&nbsp;:
-<orderedlist> 
-  <listitem>télécharger le zip de rubygems sur <ulink>http://rubygems.org</ulink>,</listitem>
-  <listitem>décompresser l'archive et vous placer dedans,</listitem>
-  <listitem>exécuter le script d'installation en tant qu'administrateur&nbsp;: <command>sudo ruby setup.rb</command></listitem>
-</orderedlist> pour installer rubygems.
-
-<note>Si la commande <command>gem</command> est indisponible, il est probable que la commande <command>gem1.8</command> ne le soit pas. Si c'est le cas il est recommandé de faire un lien symbolique pour la commande <command>gem</command> soit disponible.</note>
-	  </para>
-	</sect4>
-
-	<sect4>
-	  <title>Installation de <package>bundler</package> et des gems</title>
-	  <para>
-	    Ekylibre utilise Bundler pour gérer les gems dont il dépend&nbsp;:
-<screen>
-  sudo gem install bundler
-</screen>
-	  </para>
-	  <para>
-	    Maintenant, il est possible de lancer bundler pour installer toutes les gems. Pour cela&nbsp;:
-	  </para>
-<screen>
-  bundle install
-</screen>
-          <para>
-	    Certaines gems sont compilées à la volée, pour cela, il faut installer les paquets de développement au préalable si ce n'est pas déjà le cas&nbsp;:
-<screen>
-  sudo apt-get install ruby-dev libxml2-dev libpq-dev zlib1g-dev
-</screen>
-	  </para>
-
-	</sect4>
-
+	<title>Installation de Rake</title>
+	<para>Rake est un utilitaire similaire à Make mais en Ruby nécessaire à la maintenance d'&ekylibre;&nbsp;:
+	<screen>sudo apt-get install rake</screen>
+	<para>Si le paquet n'existe pas dans votre distribution, vous pouvez passer par Rubygems pour installer ce composant&nbsp;:</para>
+	<screen>sudo gem install rake</screen>
+	<note>
+	  <para>Si après cette commande la commande <command>rake</command> ne réponds pas, il faut rajouter un lien symbolique dans le dossier des commandes <filename>/usr/bin</filename>&nbsp;:</para>
+	  <screen>cd /usr/bin
+sudo ln -s `gem environment gemdir`/bin/rake</screen>
+	</note>
+	</para>
       </sect3>
 
+
+      
+      
       <sect3>
-	<title>Migration de la base de données</title>
-	Maintenant, il faut installer la structure de la base de données. Pour cela, il faut mettre en place le fichier <filename>./config/database.yml</filename> pour définir les connexions aux bases de données à utiliser. Pour cela, vous trouverez trois fichiers <filename>database.mysql.yml</filename>, <filename>database.postgresql.yml</filename> et <filename>database.sqlite3.yml</filename> qui peuvent servir de base pour créer votre fichier <filename>database.yml</filename>.
-	Renommer le fichier qui correspond à votre base de données en <filename>database.yml</filename>. Puis éditez-le pour compléter les champs correspondants comme dans les exemples ci-dessous :
+	<title>Installation de <package>bundler</package> et des gems</title>
+	<para>&ekylibre; utilise Bundler pour gérer les gems dont il dépend&nbsp;:
+	<screen>sudo gem install bundler</screen>
+	</para>
+	<para>Certaines gems sont compilées à l'installation, pour cela, il faut installer les paquets de développement au préalable si ce n'est pas déjà le cas&nbsp;:</para>
+	<screen>sudo apt-get install build-essential ruby-dev libxml2-dev libpq-dev zlib1g-dev</screen>
+	<para>Si vous comptez utiliser une base de données SQLite, alors il faut installer la librairie de développement de SQLite</para>
+	<screen>sudo apt-get install libsqlite3-dev</screen>
+	<para>Maintenant, il est possible de lancer bundler pour installer toutes les gems. Pour cela&nbsp;:</para>
+	<screen>bundle install</screen>
+      </sect3>
+      
+
+      <sect3>
+	<title>Configuration de la base de données</title>
+
+	<para>Maintenant, il faut installer la structure de la base de données. Pour cela, il faut mettre en place le fichier <filename>./config/database.yml</filename> pour définir les connexions aux bases de données à utiliser. Pour cela, vous trouverez trois fichiers <filename>database.mysql.yml</filename>, <filename>database.postgresql.yml</filename> et <filename>database.sqlite3.yml</filename> qui peuvent servir de base pour créer votre fichier <filename>database.yml</filename>.</para>
+	<para>Renommer le fichier qui correspond à votre base de données en <filename>database.yml</filename>. Puis éditez-le pour compléter les champs correspondants comme dans les exemples ci-dessous :</para>
+
 <programlisting>
 # Exemple avec PostgreSQL pour la base en mode development
 development:
@@ -169,7 +161,6 @@ test:
   username: ekylibre
   password: Mon_Mot-D3_p45Se!
 </programlisting>
-
 Pour PostgreSQL et MySQL, il faut bien penser à créer le compte qui correspond et la base de données :
 <programlisting>
 # PostgreSQL
@@ -182,24 +173,36 @@ CREATE DATABASE IF NOT EXISTS ekylibre_development;
 GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
 </programlisting>
 
-<para>
-  Une fois cette configuration effectuée, il faut lancer la migration pour préparer ou mettre à jour la base de données :
-</para>
-<screen>
-  rake db:migrate
-</screen>
       </sect3>
+      <sect3>
+	<title>Construction des tables en base de données</title>
+	<para>Une fois cette configuration effectuée, il faut lancer la migration pour préparer ou mettre à jour la base de données&nbsp;:</para>
+	<screen>rake db:migrate</screen>
+      </sect3>
+
+
 
       <sect3>
 	<title>Lancement du serveur web en mode développement</title>
 	Pour lancer votre serveur en mode développement, il suffit d'éxecuter la commande  à la racine de votre dossier :
-<screen>
-  ruby script/server
-</screen>
+	<screen>ruby script/server</screen>
 
-	Pour utiliser Ekylibre en production, l'utilisation de passenger est recommandée : http://www.modrails.com/
+	Pour utiliser &ekylibre; en production, l'utilisation de passenger est recommandée : http://www.modrails.com/
       </sect3>
+
+
     </sect2>
+
+
+    <sect2>
+      <title>Installation d'&ekylibre; en mode production avec Passenger</title>
+      <para>Pour faire tourner &ekylibre; dans des conditions convenables, il est nécessaire de passer en mode production avec Apache et Passenger. Pour cela vous pouvez suivre les précédentes explications et vous arrétez juste après le </para>
+
+    </sect2>
+
+
+
+
 
   </sect1>
 
@@ -221,7 +224,7 @@ GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
 	    Suivre les indications en cliquant sur <guibutton>Suivant</guibutton>. Vers la fin de l'installation, un terminal apparait où la migration s'effectue. Cette opération peut prendre du temps.
 	  </para></listitem>
 	  <listitem><para>
-	    Pour utiliser Ekylibre, il suffit d'aller dans le menu : <guimenu>Démarrer</guimenu> &gt; <guisubmenu>Tous les programmes</guisubmenu> &gt; <guisubmenu>Ekylibre</guisubmenu> &gt; <guimenuitem>Ekylibre X.Y.Z</guimenuitem>. Il ouvre votre navigateur par défaut sur la page d'accueil d'Ekylibre.
+	    Pour utiliser &ekylibre;, il suffit d'aller dans le menu : <guimenu>Démarrer</guimenu> &gt; <guisubmenu>Tous les programmes</guisubmenu> &gt; <guisubmenu>&ekylibre;</guisubmenu> &gt; <guimenuitem>&ekylibre; X.Y.Z</guimenuitem>. Il ouvre votre navigateur par défaut sur la page d'accueil d'&ekylibre;.
 	  </para></listitem>
 	</itemizedlist>
       </para>    
@@ -232,7 +235,7 @@ GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
 	  <listitem>Cliquez sur <guibutton>Créer une société</guibutton></listitem>
 	  <listitem>Une fois la page chargée, saisissez les informations concernant votre société et vous-même et validez.</listitem>
 	</orderedlist>
-	Après un temps de chargement, vous accéderez à la page d'accueil d'Ekylibre de votre société.
+	Après un temps de chargement, vous accéderez à la page d'accueil d'&ekylibre; de votre société.
       </para>
 
       <important>Lors de l'enregistrement, n'oubliez pas de noter votre nom d'utilisateur ainsi que votre mot de passe.</important>

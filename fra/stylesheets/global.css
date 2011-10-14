@@ -1,20 +1,12 @@
-/** { font-family: Liberation,Arial,sans-serif; }
-a:link, a:visited, a:focus, a:active { color: #05A; }
-p { text-align: justify; }
-body { background: white; padding: 24px; margin: 0;}
-h1, h2 { color: #047 }
-h3 { color: #59C }
-*/
-
 hr { border: none; height: 2px; background: #DDD; }
 
 /*.mediaobject{ background:#F7F7F7; width: 90%; margin: 8px auto; border: 1px solid #DDD; padding: 0;  -moz-box-shadow: 0 0 10px #DDD;}*/
 .mediaobject{text-align: center;}
 .mediaobject table { margin: 0 auto; }
-.mediaobject img {  margin: 16px auto 0;  -moz-box-shadow: 0 0 20px #DDD;}
+.mediaobject img {  margin: 16px auto 0; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1)}
 /*.mediaobject .caption { background: #EEE;  }*/
 .mediaobject .caption p { text-align: center; font-style: italic; margin: 0; padding: 0.5em; color: #555;}
 
-pre { font-family: "Liberation Monospace", monospace; background: #E9F0F7; border: 1px solid #BDF; padding:16px; margin: 16px;  -moz-box-shadow: 0 0 20px #DDD;}
+pre { font-family: "Liberation Monospace", monospace; background: #E9F0F7; border: 1px solid #BDF; padding:10px 16px; margin: 12px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1)}
 
 .sidebar { float: right; width: 20%; padding: 0 16px; background: white; border: 2px solid #007;  margin: 2px 0 4px 1em; -moz-box-shadow: 0 0 20px #999; }
