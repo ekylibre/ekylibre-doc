@@ -13,14 +13,14 @@ révision $Revision$ -->
 
     <sect2>
       <title>Règlements</title>
-      Lorsqu'un grand nombre de règlements est enregistré, un système de recherche permet de consulter les règlements relatifs à une vente, un achat ou encore ceux  correspondant à certains critères (numéro de chèque, nom ou code client). 
-      Vous pouvez également modifier un règlement suivant son identifiant. Vous accéderez ainsi à une page récapitulative des caractéristiques du règlement et des ventes qui lui sont rattachées. 
+      <para>Lorsqu'un grand nombre de règlements est enregistré, un système de recherche permet de consulter les règlements relatifs à une vente, un achat ou encore ceux  correspondant à certains critères (numéro de chèque, nom ou code client).</para>
+      <para>Vous pouvez également modifier un règlement suivant son identifiant. Vous accéderez ainsi à une page récapitulative des caractéristiques du règlement et des ventes qui lui sont rattachées.</para>
     </sect2>
 
     <sect2>
       <title>Remise de chèques</title>
-      Pour effectuer une remise de chèques, il vous suffit de cocher les chèques encaissés avant la date du jour et de sélectionner le compte sur lequel le virement va s'effectuer. Une fois l'opération validée, un tableau récapitule les remises de chèques déjà effectuées. Des informations supplémentaires vous permettent de connaître le nombre de chèques restant à encaisser, les espèces, le virement CA et le virement CPP. 
-      Au final, vous pouvez imprimer le bordereau de remise de chèque et l'envoyer avec les descriptifs des chèques et les informations principales comme le nom de la société, la date et le compte bancaire à créditer. 
+      <para>Pour effectuer une remise de chèques, il vous suffit de cocher les chèques encaissés avant la date du jour et de sélectionner le compte sur lequel le virement va s'effectuer. Une fois l'opération validée, un tableau récapitule les remises de chèques déjà effectuées. Des informations supplémentaires vous permettent de connaître le nombre de chèques restant à encaisser, les espèces, le virement CA et le virement CPP.</para>
+      <para>Au final, vous pouvez imprimer le bordereau de remise de chèque et l'envoyer avec les descriptifs des chèques et les informations principales comme le nom de la société, la date et le compte bancaire à créditer.</para>
     </sect2>
 
     <!--
@@ -43,19 +43,19 @@ Vous devez remplir le formulaire en renseignant le régime d'imposition ainsi qu
 
     <sect2>
       <title>Trésoreries (Comptes bancaires et caisses)</title>
-      Vous pouvez créer, modifier ou supprimer un compte bancaire. Il devra référencer un compte comptable et un journal donné. En outre, le renseignement du code IBAN ou RIB précisera si le compte bancaire est destiné à des opérations transfrontalières ou nationales.
+      <para>Vous pouvez créer, modifier ou supprimer un compte bancaire. Il devra référencer un compte comptable et un journal donné. En outre, le renseignement du code IBAN ou RIB précisera si le compte bancaire est destiné à des opérations transfrontalières ou nationales.
 
-      {{:ekylibre:manual:compte_bancaire.png|Comptabilité - Création d'un compte bancaire}}
+      {{:ekylibre:manual:compte_bancaire.png|Comptabilité - Création d'un compte bancaire}}</para>
     </sect2>
 
     <sect2>
       <title>Taxes</title>
-      Vous pouvez créer, modifier ou supprimer des taxes pour les opérations de vente et d'achat (collectée ou déductible). Celles-ci s'expriment sous forme de valeur nominale ou bien en pourcentage.
+      <para>Vous pouvez créer, modifier ou supprimer des taxes pour les opérations de vente et d'achat (collectée ou déductible). Celles-ci s'expriment sous forme de valeur nominale ou bien en pourcentage.</para>
     </sect2>
 
     <sect2>
       <title>Types de règlement</title>
-      VouIls permettent de préciser le mode de paiement (cash, carte bancaire, chèque ou virement) de votre client à l'issue d'une opération de vente .
+      <para>Ils permettent de préciser le mode de paiement (cash, carte bancaire, chèque ou virement) de votre client à l'issue d'une opération de vente.</para>
     </sect2>
 
 

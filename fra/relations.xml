@@ -36,9 +36,9 @@ révision $Revision$ -->
       <para>
 	Dans ce second cas, cela se fait en deux étapes. Premièrement, la création ou modification d'entités par l'intermédiaire de formulaires. Il faut y préciser&nbsp;:
 	<itemizedlist>
-	  <listitem>les caractéristiques principales de l'entité&nbsp;: personne ou société ?, sa langue, son nom et prénom, sa position en tant que client, fournisseur ou transposteur ?</listitem>
-	  <listitem>l'attribution d'un compte comptable ainsi que d'autres informations plus ciblées dans le cas où la personne est un client (catégorie client, détails de la première rencontre, représentant, avantages commerciaux).</listitem>
-	  <listitem>les informations complémentaires pour détailler son profil comme sa date de naissance, une photo, le cas échéant son site internet.</listitem>
+	  <listitem><para>les caractéristiques principales de l'entité&nbsp;: personne ou société ?, sa langue, son nom et prénom, sa position en tant que client, fournisseur ou transposteur ?</para></listitem>
+	  <listitem><para>l'attribution d'un compte comptable ainsi que d'autres informations plus ciblées dans le cas où la personne est un client (catégorie client, détails de la première rencontre, représentant, avantages commerciaux).</para></listitem>
+	  <listitem><para>les informations complémentaires pour détailler son profil comme sa date de naissance, une photo, le cas échéant son site internet.</para></listitem>
 	</itemizedlist>
 	
 	Deuxièmement, la gestion de paramètres. On peut gérer des contacts, des évènements, des liens, des observations, des responsabilités et des comptes bancaires pour l'entité (voir la section "Responsabilités").

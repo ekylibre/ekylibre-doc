@@ -3,10 +3,10 @@
 le       $Date$
 par      $Author$
 révision $Revision$ -->
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
-"./dtd/4.3/docbookx.dtd" [
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+"./dtd/4.4/docbookx.dtd" [
 
-<!--<!ENTITY nbsp " ">-->
+<!ENTITY nbsp "&#160;">
 <!ENTITY eacute "é">
 <!ENTITY egrave "è">
 <!ENTITY agrave "à">

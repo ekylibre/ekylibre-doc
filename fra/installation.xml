@@ -13,33 +13,33 @@ révision $Revision$ -->
 
   <para>Ce chapitre décrit l'installation d'&ekylibre; en utilisant le code source. (Ce <phrase>chapitre</phrase> peut être ignoré lors de l'installation d'une distribution pré-empaquetée, paquet RPM ou Debian, par exemple. Il est alors plus utile de lire les instruction du mainteneur du paquet.)</para>
 
-  <para>&ekylibre; utilise <ulink url="http://www.ruby-lang.org">Ruby</ulink> et le framework <ulink url="http://rubyonrails.org/">Ruby on Rails</ulink>. Vous pouvez le télécharger librement sur <ulink>http://www.ekylibre.org</ulink>. &ekylibre; fonctionne avec les bases de données <ulink url="http://mysql.com">MySQL</ulink>, <ulink url="http://www.postgresql.org">PostgreSQL</ulink> et <ulink url="http://sqlite.org">SQLite</ulink> (il n'a pas été testé avec d'autres bases de données).
+  <para>&ekylibre; utilise <ulink url="http://www.ruby-lang.org">Ruby</ulink> et le framework <ulink url="http://rubyonrails.org/">Ruby on Rails</ulink>. Vous pouvez le télécharger librement sur <ulink url="http://www.ekylibre.org">www.ekylibre.org</ulink>. &ekylibre; fonctionne avec les bases de données <ulink url="http://mysql.com">MySQL</ulink>, <ulink url="http://www.postgresql.org">PostgreSQL</ulink> et <ulink url="http://sqlite.org">SQLite</ulink> (il n'a pas été testé avec d'autres bases de données).
   </para>
 
-  <sect1>
-    <title>Systèmes d'exploitation basés sur Debian</title>
-
+  <sect1 id="classic-debian-installation">
+    <title>Installation classique sous les systèmes d'exploitation basés sur Debian</title>
     <para>L'installation d'&ekylibre; sous les <ulink url="http://www.debian.org/misc/children-distros.fr.html">distribution dérivées</ulink> de Debian peut se faire automatiquement avec un gestionnaire de paquet si les dépendances sont satisfaites (Ce qui est le cas à partir de Squeeze (6) sous Debian et de Maverick (10.10) sous Ubuntu)</para>
-
     <para>Sinon, il est toujours possible de l'installer manuellement.</para>
+    <para>Les paquets &ekylibre; sont disponibles sur <ulink url="http://www.ekylibre.org">www.ekylibre.org</ulink>. Après téléchargement du paquet, il faut l'installer avec Gdebi qui installera aussi les dépendances.</para>    
+  </sect1>
+
+
+
+
+  <sect1 id="manual-debian-installation">
+    <title>Installation <emphasis>manuelle</emphasis> sous les systèmes d'exploitation basés sur Debian</title>
 
     <sect2>
-      <title>Installation du paquet</title>
-
-      <para>Les paquets &ekylibre; sont disponibles sur <ulink>www.ekylibre.org</ulink>. Après téléchargement du paquet, il faut l'installer avec Gdebi qui installera aussi les dépendances.</para>
-
-    </sect2>
-
-    <sect2>
-      <title>Installation manuelle</title>
+      <title>Mise en place de l'environnement</title>
 
       <sect3>
 	<title>Récupération d'&ekylibre;</title>
-	<para>Vous pouvez récupérer une archive des sources d'&ekylibre; sur <ulink>http://www.ekylibre.org</ulink>. Une fois le fichier récupéré, vous pouvez le décompresser et vous positionner dedans.</para>
+
+	<para>Vous pouvez récupérer une archive des sources d'&ekylibre; sur <ulink url="http://www.ekylibre.org">www.ekylibre.org</ulink>. Une fois le fichier récupéré, vous pouvez le décompresser et vous positionner dedans.</para>
 	<screen>wget https://www.ekylibre.org/releases/latest/source/ekylibre-0.3.0-source.tar.bz2
 tar xjvf ekylibre-0.3.0-source.tar.bz2
 cd ekylibre/</screen>
-ou directement sur <ulink url="https://www.github.com/ekylibre/ekylibre">Github</ulink>&nbsp;:
+<para>ou directement sur <ulink url="https://www.github.com/ekylibre/ekylibre">Github</ulink>&nbsp;:</para>
 <screen>wget https://www.github.com/ekylibre/ekylibre/tarball/master
 tar xzvf ekylibre-0.3.x-gyyyyyyy.tar.gz
 cd ekylibre-ekylibre-yyyyyyy</screen>
@@ -48,8 +48,9 @@ cd ekylibre-ekylibre-yyyyyyy</screen>
 
 
       <sect3>
-	<para>Maintenant, il faut installer et/ou configurer la base de données. &ekylibre; respecte au maximum les standards SQL communs à PostgreSQL, MySQL et SQLite. En théorie, il est compatible avec tous les adaptateurs fournis avec Ruby On Rails (Oracle, Firebird, Microsoft SQLServer...) mais n'a jamais été réellement testé. La première phase de l'installation est donc de s'assurer que vous avez une base de données en route. Si c'est déjà la cas, vous pouvez passer cette étape.</para>
 	<title>Installation de la base de données</title>
+
+	<para>Maintenant, il faut installer et/ou configurer la base de données. &ekylibre; respecte au maximum les standards SQL communs à PostgreSQL, MySQL et SQLite. En théorie, il est compatible avec tous les adaptateurs fournis avec Ruby On Rails (Oracle, Firebird, Microsoft SQLServer...) mais n'a jamais été réellement testé. La première phase de l'installation est donc de s'assurer que vous avez une base de données en route. Si c'est déjà la cas, vous pouvez passer cette étape.</para>
 	<itemizedlist>
 	  <listitem>
 	    <para>Pour PostgreSQL, il suffit d'installer le paquet par défaut. &ekylibre; est compatible avec les versions 8.3 et supérieures&nbsp;:</para>
@@ -79,7 +80,7 @@ cd ruby-1.9.2-p290
 ./configure
 make
 sudo make install</screen>
-	Pour plus de détails, voir <ulink href="http://www.ruby-lang.org/fr/">le site officiel de Ruby</ulink>.</para>
+	Pour plus de détails, voir <ulink url="http://www.ruby-lang.org/fr/">le site officiel de Ruby</ulink>.</para>
       </sect3>
 
 
@@ -93,14 +94,14 @@ sudo make install</screen>
 tar xzvf rubygems-1.8.10.tgz
 cd rubygems-1.8.10
 sudo ruby setup.rb</screen>
-<note>Si la commande <command>gem</command> est indisponible, il est probable que la commande <command>gem1.8</command> ou <command>gem1.9</command> ne le soit pas. Si c'est le cas il est recommandé de faire un lien symbolique pour la commande <command>gem</command> soit disponible.</note>
+<note><para>Si la commande <command>gem</command> est indisponible, il est probable que la commande <command>gem1.8</command> ou <command>gem1.9</command> ne le soit pas. Si c'est le cas il est recommandé de faire un lien symbolique pour la commande <command>gem</command> soit disponible.</para></note>
 	</para>
       </sect3>
 
 
       <sect3>
 	<title>Installation de Rake</title>
-	<para>Rake est un utilitaire similaire à Make mais en Ruby nécessaire à la maintenance d'&ekylibre;&nbsp;:
+	<para>Rake est un utilitaire similaire à Make mais en Ruby nécessaire à la maintenance d'&ekylibre;&nbsp;:</para>
 	<screen>sudo apt-get install rake</screen>
 	<para>Si le paquet n'existe pas dans votre distribution, vous pouvez passer par Rubygems pour installer ce composant&nbsp;:</para>
 	<screen>sudo gem install rake</screen>
@@ -109,14 +110,13 @@ sudo ruby setup.rb</screen>
 	  <screen>cd /usr/bin
 sudo ln -s `gem environment gemdir`/bin/rake</screen>
 	</note>
-	</para>
       </sect3>
 
 
       
       
       <sect3>
-	<title>Installation de <package>bundler</package> et des gems</title>
+	<title>Installation de <package>Bundler</package> et des gems</title>
 	<para>&ekylibre; utilise Bundler pour gérer les gems dont il dépend&nbsp;:
 	<screen>sudo gem install bundler</screen>
 	</para>
@@ -161,7 +161,7 @@ test:
   username: ekylibre
   password: Mon_Mot-D3_p45Se!
 </programlisting>
-Pour PostgreSQL et MySQL, il faut bien penser à créer le compte qui correspond et la base de données :
+<para>Pour PostgreSQL et MySQL, il faut bien penser à créer le compte qui correspond et la base de données :</para>
 <programlisting>
 # PostgreSQL
 CREATE USER ekylibre CREATEDB WITH ENCRYPTED PASSWORD 'Mon_Mot-D3_p45Se!';
@@ -180,37 +180,28 @@ GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
 	<screen>rake db:migrate</screen>
       </sect3>
 
+    </sect2>
 
-
+    <sect2>
+      <title>Lancement du serveur</title>
       <sect3>
 	<title>Lancement du serveur web en mode développement</title>
-	Pour lancer votre serveur en mode développement, il suffit d'éxecuter la commande  à la racine de votre dossier :
+	<para>Pour lancer votre serveur en mode développement, il suffit d'éxecuter la commande  à la racine de votre dossier&nbsp;:</para>
 	<screen>ruby script/server</screen>
-
-	Pour utiliser &ekylibre; en production, l'utilisation de passenger est recommandée : http://www.modrails.com/
+	<para>Pour utiliser &ekylibre; en production, l'utilisation de passenger est recommandée : http://www.modrails.com/</para>
       </sect3>
 
 
+      <sect3>
+	<title>Installation d'&ekylibre; en mode production avec Passenger</title>
+	<para>Pour faire tourner &ekylibre; dans des conditions convenables, il est nécessaire de passer en mode production avec Apache et Passenger. Pour cela vous pouvez suivre les précédentes explications et vous arrétez juste après le </para>
+      </sect3>
     </sect2>
-
-
-    <sect2>
-      <title>Installation d'&ekylibre; en mode production avec Passenger</title>
-      <para>Pour faire tourner &ekylibre; dans des conditions convenables, il est nécessaire de passer en mode production avec Apache et Passenger. Pour cela vous pouvez suivre les précédentes explications et vous arrétez juste après le </para>
-
-    </sect2>
-
-
-
-
-
   </sect1>
 
 
-  <sect1>
+  <sect1 id="windows-installation">
     <title>Installation sous <productname>Microsoft Windows</productname></title>
-
-
 
     <sect2>
       <title>Installation automatique</title>
@@ -232,13 +223,13 @@ GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
       <para>
 	À la première utilisation, il n'y a pas de comptes utilisateurs définis donc vous devez vous enregistrer vous-même en suivant la procédure suivante&nbsp;:
 	<orderedlist>
-	  <listitem>Cliquez sur <guibutton>Créer une société</guibutton></listitem>
-	  <listitem>Une fois la page chargée, saisissez les informations concernant votre société et vous-même et validez.</listitem>
+	  <listitem><para>Cliquez sur <guibutton>Créer une société</guibutton></para></listitem>
+	  <listitem><para>Une fois la page chargée, saisissez les informations concernant votre société et vous-même et validez.</para></listitem>
 	</orderedlist>
 	Après un temps de chargement, vous accéderez à la page d'accueil d'&ekylibre; de votre société.
       </para>
 
-      <important>Lors de l'enregistrement, n'oubliez pas de noter votre nom d'utilisateur ainsi que votre mot de passe.</important>
+      <important><para>Lors de l'enregistrement, n'oubliez pas de noter votre nom d'utilisateur ainsi que votre mot de passe.</para></important>
     </sect2>    
 
     <sect2>

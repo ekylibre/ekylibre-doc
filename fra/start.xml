@@ -81,11 +81,9 @@ révision $Revision$ -->
 
     <sect2>
       <title>Centre</title>
-      <para>
-	C'est la zone de travail. Un titre est affiché sur chaque page pour pouvoir se repérer en permanence dans le logiciel. 
-      </para>
+      <para>C'est la zone de travail. Un titre est affiché sur chaque page pour pouvoir se repérer en permanence dans le logiciel.</para>
 
-      <note>Il est à noter que le lien permettant d'ouvrir l'aide contextuelle se trouve à droite du titre.</note>
+      <note><para>Il est à noter que le lien permettant d'ouvrir l'aide contextuelle se trouve à droite du titre.</para></note>
     </sect2>
 
     <sect2>
@@ -118,10 +116,10 @@ révision $Revision$ -->
 
       <para>Les icônes les plus fréquents sont ceux permettant les opérations suivantes&nbsp;:</para>
       <itemizedlist>
-	<listitem><para><imagedata format="PNG" width="1em" fileref="images/create.png"/> pour la création</para></listitem>
-	<listitem><para><imagedata format="PNG" width="1em" fileref="images/update.png"/> pour la modification</para></listitem>
-	<listitem><para><imagedata format="PNG" width="1em" fileref="images/delete.png"/> pour la suppressin</para></listitem>
-	<listitem><para><imagedata format="PNG" width="1em" fileref="images/print.png"/> pour l'impression</para></listitem>
+	<listitem><para><inlinemediaobject><imageobject><imagedata format="PNG" width="1em" fileref="images/create.png"/></imageobject></inlinemediaobject> pour la création</para></listitem>
+	<listitem><para><inlinemediaobject><imageobject><imagedata format="PNG" width="1em" fileref="images/update.png"/></imageobject></inlinemediaobject> pour la modification</para></listitem>
+	<listitem><para><inlinemediaobject><imageobject><imagedata format="PNG" width="1em" fileref="images/delete.png"/></imageobject></inlinemediaobject> pour la suppressin</para></listitem>
+	<listitem><para><inlinemediaobject><imageobject><imagedata format="PNG" width="1em" fileref="images/print.png"/></imageobject></inlinemediaobject> pour l'impression</para></listitem>
       </itemizedlist>
     </sect2>
 

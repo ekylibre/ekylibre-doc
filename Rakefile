@@ -1,7 +1,9 @@
 require 'pathname'
 
+APPLICATION = "ekylibre".freeze
+
 locales = Dir["???"].select do |locale|
-  File.exist?(File.join(locale, "ekylibre.xml"))
+  File.exist?(File.join(locale, "index.xml"))
 end
 
 def xsltproc(source, stylesheet, options={})
@@ -90,19 +92,16 @@ task :doc do
     version = f.read
   end
 
-  app = "ekylibre"
-  root_file = "#{app}.xml"
-
   FileUtils.rm_rf(dir)
 
-  options = {"section.autolabel"=>1, "section.autolabel.max.depth" => 5, "section.label.includes.component.label"=> 1 }
+  options = {"section.autolabel"=>1, "section.autolabel.max.depth" => 5, "section.label.includes.component.label"=> 1, "toc.section.depth" => 4, "generate.index" => 1}
 
   for locale in locales
     source_dir = root.join(locale)
-    source = source_dir.join(root_file)
+    source = source_dir.join("index.xml")
     next unless File.exist?(source)
     ldir = dir.join(locale)
-    base_name = "#{app}-#{version}-#{locale}"
+    base_name = "#{APPLICATION}-#{version}-#{locale}"
 
     # website
     odir = ldir.join(base_name)
@@ -131,5 +130,5 @@ task :doc do
   end
 end
 
-#:nodoc:
+#              
 task :default=>[:version, :doc]
