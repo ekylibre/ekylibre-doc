@@ -112,8 +112,6 @@ sudo ln -s `gem environment gemdir`/bin/rake</screen>
 	</note>
       </sect3>
 
-
-      
       
       <sect3>
 	<title>Installation de <package>Bundler</package> et des gems</title>
@@ -133,68 +131,133 @@ sudo ln -s `gem environment gemdir`/bin/rake</screen>
 	<title>Configuration de la base de données</title>
 
 	<para>Maintenant, il faut installer la structure de la base de données. Pour cela, il faut mettre en place le fichier <filename>./config/database.yml</filename> pour définir les connexions aux bases de données à utiliser. Pour cela, vous trouverez trois fichiers <filename>database.mysql.yml</filename>, <filename>database.postgresql.yml</filename> et <filename>database.sqlite3.yml</filename> qui peuvent servir de base pour créer votre fichier <filename>database.yml</filename>.</para>
-	<para>Renommer le fichier qui correspond à votre base de données en <filename>database.yml</filename>. Puis éditez-le pour compléter les champs correspondants comme dans les exemples ci-dessous :</para>
+	<para>Vous pouvez copier le fichier qui correspond à votre base de données en <filename>database.yml</filename>. Puis éditez-le pour compléter les champs correspondants comme dans les exemples ci-dessous&nbsp;:</para>
 
+	<note>
+	  <para>&ekylibre; comme toutes les applications Ruby on Rails peut tourner dans différents modes basiques qui sont&nbsp;: development, test et production. À chaque mode correspond une utilisation de l'application&nbsp;:</para>
+	  <itemizedlist>
+	    <listitem><para>le mode <emphasis>development</emphasis> est utilisé par les développeurs. Il est plus lent que les autres car il n'utilise pratiquement pas de cache.</para></listitem>
+	    <listitem><para>le mode <emphasis>test</emphasis> est utilisé par les développeurs pour lancer des batteries de tests dans un environnement similaire à celui de production.</para></listitem>
+	    <listitem><para>le mode <emphasis>production</emphasis> est utilisé pour installer et faire tourner l'application en fonctionnement normal.</para></listitem>
+	  </itemizedlist>
+	  <para>Le reste de la documentation part du principe que l'on souhaite installer &ekylibre; en mode production. Pour basculer de mode, il suffit de remplacer <emphasis>"production"</emphasis> par le mode que vous souhaitez utiliser dans le reste de la documentation.</para>
+	</note>
+
+	<itemizedlist>
+
+	  <listitem>
+	    <para>Exemple de configuration avec PostgreSQL pour la base en mode développement&nbsp;:</para>
 <programlisting>
-# Exemple avec PostgreSQL pour la base en mode development
-development:
+# ./config/database.yml
+production:
   adapter: postgresql
   encoding: unicode
-  database: ekylibre_development
+  database: ekylibre_production
   pool: 5
   username: ekylibre
   password: Mon_Mot-D3_p45Se!
   host: 127.0.0.1
+</programlisting>
+<para>Il faut créer manuellement l'utilisateur et la base de données sous PostgreSQL si cela n'a pas déjà été fait. Cela peut se faire soit par une interface déjà en place (phppgadmin, pgadmin3...) soit directement en ligne de commande avec <command>psql</command>&nbsp;:</para>
+<screen>
+ekylibre$ sudo su postgres
+postgres$ psql
+psql (8.4.8)
+Saisissez « help » pour l'aide.
 
-# Exemple de configuration pour une base de test SQLite3
-test:
+postgres=# CREATE USER ekylibre CREATEDB WITH ENCRYPTED PASSWORD 'Mon_Mot-D3_p45Se!';
+CREATE ROLE
+postgres=# CREATE DATABASE ekylibre_production;
+CREATE DATABASE
+</screen>
+	  </listitem>
+
+
+	  <listitem>
+	    <para>Exemple de configuration pour une base SQLite3&nbsp;:</para>
+<programlisting>
+# ./config/database.yml
+production:
   adapter: sqlite3
-  database: db/test.sqlite3
+  database: db/production.sqlite3
   pool: 5
   timeout: 5000
+</programlisting>
+	  </listitem>
 
-# Exemple de configuration pour une base de production MySQL
-test:
+	  <listitem>
+	    <para>Exemple de configuration pour une base de production MySQL</para>
+<programlisting>
+# ./config/database.yml
+production:
   adapter: mysql
   database: ekylibre_production
   pool: 5
   username: ekylibre
   password: Mon_Mot-D3_p45Se!
 </programlisting>
-<para>Pour PostgreSQL et MySQL, il faut bien penser à créer le compte qui correspond et la base de données :</para>
-<programlisting>
-# PostgreSQL
-CREATE USER ekylibre CREATEDB WITH ENCRYPTED PASSWORD 'Mon_Mot-D3_p45Se!';
-CREATE DATABASE ekylibre_development;
-
-# MySQL
-CREATE USER ekylibre IDENTIFIED BY 'Mon_Mot-D3_p45Se!';
-CREATE DATABASE IF NOT EXISTS ekylibre_development;
-GRANT ALL ON ekylibre_development.* TO 'ekylibre'@'localhost';
-</programlisting>
-
+	  <para>Comme pour PostgreSQL, il faut créer au préalable l'utilisateur et la base de données tels que spécifiés dans le fichier <filename>config/database.yml</filename>&nbsp;:</para>
+	  <screen>CREATE USER ekylibre IDENTIFIED BY 'Mon_Mot-D3_p45Se!';
+CREATE DATABASE IF NOT EXISTS ekylibre_production;
+GRANT ALL ON ekylibre_production.* TO 'ekylibre'@'localhost';</screen>
+	  </listitem>
+	</itemizedlist>
       </sect3>
+
+
       <sect3>
 	<title>Construction des tables en base de données</title>
 	<para>Une fois cette configuration effectuée, il faut lancer la migration pour préparer ou mettre à jour la base de données&nbsp;:</para>
-	<screen>rake db:migrate</screen>
+	<screen>rake db:migrate RAILS_ENV=production</screen>
+	<para>Pour installer la base de données d'autres environnements, il vous suffit de relancer la commande avec le nom de l'environnement souhaité&nbsp;:</para>
+	<screen>rake db:migrate RAILS_ENV=development</screen>
       </sect3>
 
     </sect2>
 
+
+
     <sect2>
       <title>Lancement du serveur</title>
+
       <sect3>
-	<title>Lancement du serveur web en mode développement</title>
-	<para>Pour lancer votre serveur en mode développement, il suffit d'éxecuter la commande  à la racine de votre dossier&nbsp;:</para>
-	<screen>ruby script/server</screen>
-	<para>Pour utiliser &ekylibre; en production, l'utilisation de passenger est recommandée : http://www.modrails.com/</para>
+	<title>En mode développement</title>
+	<para>Pour lancer votre serveur en mode développement, il suffit d'éxecuter la commande à la racine de votre dossier&nbsp;:</para>
+	<screen>rails s</screen>
+	<para>Pour que tout fonctionne correctement, il faut avoir configurer correctement l'environnement <emphasis>development</emphasis> au départ.</para>
       </sect3>
 
 
       <sect3>
-	<title>Installation d'&ekylibre; en mode production avec Passenger</title>
-	<para>Pour faire tourner &ekylibre; dans des conditions convenables, il est nécessaire de passer en mode production avec Apache et Passenger. Pour cela vous pouvez suivre les précédentes explications et vous arrétez juste après le </para>
+	<title>En mode production avec Passenger</title>
+	<para>Pour faire tourner &ekylibre; dans des conditions convenables, il est nécessaire de passer en mode production avec Apache2 et Passenger.</para>
+	<screen>sudo apt-get install apache2 apache2-prefork-dev build-essential</screen>
+	<para>Une fois Apache installé, il faut installer le module passenger qui est une gem à compiler</para>
+	<screen>gem install passenger</screen>
+	<para>Il faut éxecuter la commande d'installation qui compilera un module pour Apache2&nbsp;:</para>
+	<screen>passenger-install-apache2-module</screen>
+	<para>Si la commande ne répond pas, il faut utiliser la commande ci-dessous&nbsp;:</para>
+	<screen>`gem environment gemdir`/bin/passenger-install-apache2-module</screen>
+	<para>La compilation peut prendre quelques minutes.</para>
+	<para>Ensuite, il faut ajouter le module à Apache&nbsp;:</para>
+	<screen>passenger-install-apache2-module --snippet > /etc/apache2/conf.d/passenger.conf</screen>
+	<para>ou si nécessaire&nbsp;:</para>
+	<screen>`gem environment gemdir`/bin/passenger-install-apache2-module --snippet > /etc/apache2/conf.d/passenger.conf</screen>
+	<para>Maintenant que Apache peut utiliser Passenger, il faut configurer l'application &ekylibre;. Pour cela il faut créer un fichier de configuration <filename>/etc/apache2/sites-available/ekylibre</filename> qui définiera l'hôte qui hébergera l'application&nbsp;:</para>
+<programlisting><![CDATA[
+RailsAutoDetect Off
+RailsBaseURI /ekylibre
+<Directory /chemin/vers/ekylibre>
+        Options FollowSymLinks -MultiViews
+        Allow from all
+        PassengerAppRoot /chemin/vers/ekylibre
+</Directory>
+]]></programlisting>
+        <para>Ce fichier de configuration n'est pas encore "activé", pour que Apache le prenne en compte, il faut l'activer en utilisant la commande <command>a2ensite</command>&nbsp;:</para>
+	<screen>sudo a2ensite ekylibre</screen>
+        <para>Enfin, pour valider les changement sous Apache, il faudra le recharger avec sa nouvelle configuration&nbsp;:</para>
+	<screen>sudo invoke-rc.d apache2 reload</screen>
+        <para>Ekylibre sera accessible avec votre navigateur à l'URL <uri>http://localhost/ekylibre</uri></para>
       </sect3>
     </sect2>
   </sect1>

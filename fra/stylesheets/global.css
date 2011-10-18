@@ -10,3 +10,4 @@ hr { border: none; height: 2px; background: #DDD; }
 pre { font-family: "Liberation Monospace", monospace; background: #E9F0F7; border: 1px solid #BDF; padding:10px 16px; margin: 12px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1)}
 
 .sidebar { float: right; width: 20%; padding: 0 16px; background: white; border: 2px solid #007;  margin: 2px 0 4px 1em; -moz-box-shadow: 0 0 20px #999; }
+.note { background: #EEA; padding: 8px 16px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
