@@ -9,13 +9,9 @@ révision $Revision$ -->
 
   <sect1>
     <title>Concept</title>
-    <para>
-      Ekylibre est une application de gestion intégré pour les TPE agricoles et les TPE de manière plus générale. C'est une application web<footnote><para>En informatique, une application Web (aussi appelée site Web dynamique ou WebApp) est un logiciel applicatif manipulable grâce à un navigateur Web. De la même manière que les sites Web, une application Web est généralement placée sur un serveur et se manipule en actionnant des widgets à l'aide d'un navigateur Web, via un réseau informatique (Internet, intranet, réseau local, etc.).</para></footnote>. Elle peut donc être utilisée aussi bien sur un réseau local que sur Internet.
-    </para>
+    <para>Ekylibre est une application de gestion intégré pour les TPE agricoles et les TPE de manière plus générale. C'est une application web<footnote><para>En informatique, une application Web (aussi appelée site Web dynamique ou WebApp) est un logiciel applicatif manipulable grâce à un navigateur Web. De la même manière que les sites Web, une application Web est généralement placée sur un serveur et se manipule en actionnant des widgets à l'aide d'un navigateur Web, via un réseau informatique (Internet, intranet, réseau local, etc.).</para></footnote>. Elle peut donc être utilisée aussi bien sur un réseau local que sur Internet.</para>
 
-    <para>
-      Ekylibre est multi-utilisateur, multi-poste et multi-société.
-    </para>
+    <para>Ekylibre est multi-utilisateurs, multi-postes et multi-sociétés.</para>
     
     <para>
       L'application peut se décomposer en plusieurs modules&nbsp;:

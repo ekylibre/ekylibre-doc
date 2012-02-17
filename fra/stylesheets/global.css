@@ -7,7 +7,9 @@ hr { border: none; height: 2px; background: #DDD; }
 /*.mediaobject .caption { background: #EEE;  }*/
 .mediaobject .caption p { text-align: center; font-style: italic; margin: 0; padding: 0.5em; color: #555;}
 
-pre { font-family: "Liberation Monospace", monospace; background: #E9F0F7; border: 1px solid #BDF; padding:10px 16px; margin: 12px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1)}
+pre { font-family: "Liberation Monospace", monospace; background: #E9F0F7; background: rgba(149,119,116,0.12); border: 1px solid #DDD; border: 1px solid rgba(99,99,99,0.12); padding:8px 14px; margin: 12px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1)}
 
 .sidebar { float: right; width: 20%; padding: 0 16px; background: white; border: 2px solid #007;  margin: 2px 0 4px 1em; -moz-box-shadow: 0 0 20px #999; }
-.note { background: #EEA; padding: 8px 16px; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+.tip     { background: #CEA; padding: 8px 16px; margin: 8px 0; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+.note    { background: #EEA; padding: 8px 16px; margin: 8px 0; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+.caution { background: #FDA; padding: 8px 16px; margin: 8px 0; box-shadow: 0 0 20px #DDD; -webkit-box-shadow: 0 0 20px #DDD; -moz-box-shadow: 0 0 20px #DDD; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
