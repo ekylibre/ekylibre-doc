@@ -86,7 +86,7 @@ end
 desc "Build documentation for all locales (#{locales.join(', ')})"
 task :doc do
   root = Pathname.new(File.dirname(__FILE__))
-  dir = root.join('manual')
+  dir = Pathname.new(ENV["OUTPUT_DIR"] || root.join('manual'))
   version = "x.y.z"
   File.open(root.join("VERSION"), "rb:UTF-8") do |f|
     version = f.read
