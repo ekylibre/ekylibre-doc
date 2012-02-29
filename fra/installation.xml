@@ -295,7 +295,7 @@ mysql> <command>exit</command></screen>
 	<para>La compilation peut prendre quelques minutes.</para>
 	<para>Ensuite, il faut activer le module pour Apache&nbsp;:</para>
 	<screen>passenger-install-apache2-module --snippet > /etc/apache2/conf.d/passenger.conf</screen>
-	<para>Maintenant que Apache peut utiliser Passenger, il faut configurer l'application &ekylibre;. Pour cela, il faut créer un fichier de configuration <filename>/etc/apache2/sites-available/ekylibre</filename> qui définira l'hôte qui hébergera l'application&nbsp;:</para>
+	<para>Maintenant que Apache peut utiliser Passenger, il faut configurer l'application &ekylibre;. Pour cela, il faut créer un fichier de configuration <filename>/etc/apache2/sites-available/ekylibre</filename> qui définira l'hôte qui hébergera l'application. Il faut remplacer <emphasis>&lt;/chemin/vers/ekylibre&gt;</emphasis> par l'emplacement d'&ekylibre; (qui est en général <filename>/var/www/ekylibre</filename>)&nbsp;:</para>
 <programlisting>RailsAutoDetect Off
 RailsBaseURI /ekylibre
 &lt;Directory <emphasis>&lt;/chemin/vers/ekylibre&gt;</emphasis>&gt;
