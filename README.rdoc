@@ -1,8 +1,16 @@
-= Official documentation of Ekylibre
+{<img src="https://www.ekylibre.org/site/local/cache-vignettes/L400xH115/siteon0-9a58d.png"/>}[http://www.ekylibre.org]
+
+= Official documentation
 
 This project gathers all the documentation on Ekylibre in DocBook format.
 
-To build all the documentation:
+== Requirements
+
+verify you have this packages (fop and xsltproc):
+
+  sudo apt-get install fop xsltproc
+
+To build all the documentation (look in /manual/fra/...):
 
   rake
 
@@ -16,6 +24,12 @@ We encourage you to contribute to Ekylibre's documentation.
 * Start a feature/docfix branch
 * Commit and push until you are happy with your contribution
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== See also
+
+* Forum: https://www.ekylibre.org/forum
+* Map: http://www.mindmeister.com/fr/233765234/ekylibre-1-0-2013
+* Official repository: https://github.com/ekylibre/ekylibre
 
 == License
 
