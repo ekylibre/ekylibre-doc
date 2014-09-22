@@ -1,5 +1,3 @@
-{<img src="https://www.ekylibre.org/site/local/cache-vignettes/L400xH115/siteon0-9a58d.png"/>}[http://www.ekylibre.org]
-
 = Official documentation
 
 This project gathers all the documentation on Ekylibre in DocBook format.
